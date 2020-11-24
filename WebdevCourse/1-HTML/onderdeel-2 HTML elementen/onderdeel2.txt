@@ -1,0 +1,83 @@
+ONDERDEEL 2
+
+1. Bij het inladen van een bestand is het noodzakelijk om de locatie van het
+bestand aan te geven. Dit kan op 2 manieren:
+● Absolute path
+● Relative path
+Wat houden deze 2 paths in?
+Absolute paths zijn paden waarbij de 'http://www.' worden inbegrepen zoals:
+- http://www.mysite.com
+- http://www.mysite.com/graphics/image.png
+Relative path zijn paden die worden gedefineert vanaf de bron waar het pad begint. Zoals:
+- index.html
+- /graphics/image.png
+- /help/articles/how-do-i-set-up-a-webpage.html
+
+
+Een image element is voor het inladen van een afbeelding. Afbeeldingen kunnen van
+verschillende formaat zijn. Bijvoorbeeld, een afbeelding kan een JPG formaat zijn.
+2. Zoek uit welke formaat afbeeldingen er nog meer kan zijn.
+Een afbeelding tonen is afhankelijk van of de browser het ondersteunt.
+
+De volgende formaten worden ondersteund door browsers:
+JPEG, PNG, SVG, WebP, GIF, AVIF en APNG
+
+
+3. Zoek uit welke browsers er zijn en maak een lijst van je antwoord.
+- Apple Safari.
+- Dolphin browser.
+- Google Chrome.
+- Microsoft Edge.
+- Mozilla Firefox.
+- Opera Mobile.
+- Samsung Internet.
+- UC Browser.
+
+
+4. Onderzoek hoe het plaatsen van een foto gedaan wordt en plaats deze boven
+en onderaan je website door zowel gebruik te maken van de absolute path en
+relative path.
+Aan de img element kan je ook de alt attribute gebruiken.
+*** Zie onderdeel2 voor resultaat ***
+
+
+5. Wat houdt de alt attribute in? En waarom is het handig om de alt attribuut te
+gebruiken?
+De alt attribute is een onderdeel van een afbeelding dat invloed heeft op zoekmachines. SEO maakt ook gebruik van de alt attribuut om mogelijk bovenaan de lijst te komen.
+
+
+
+In de sound folder staat een explosion.mp3 bestand.
+6. Laadt dit bestand in als een audio op het scherm.
+Extra: Maak het leuker door de audio op repeat te zetten.
+Tip: gebruik controls attribute om audio af te spelen.
+*** Zie onderdeel2.html ***
+
+Een audio bestand heeft verschillende formaten. Niet alle formaten worden
+ondersteund door de browser. Hiervoor is een oplossing voor.
+7. Speel een audio bestand af met <source> tag. Leg uit wat hier het voordeel
+van is.
+8. Zoek een willekeurig video en sla dit op in je computer. Laadt dit bestand in
+als een video op het scherm.
+Tip: De video is veel groter dan het scherm. Zoek uit welke attribuut je voor de
+video element kan gebruiken om de grootte van de video aan te passen.
+Een video bestand heeft verschillende formaten. Niet alle formaten worden
+ondersteund door de browser. Hiervoor is een oplossing voor.
+Speel een video bestand af met <source> tag. Leg uit wat hier het voordeel van is.
+
+
+Lijsten
+Door gebruik te maken van lijsten in HTML kan je opsommingen eenvoudig
+weergeven. Onderzoek de verschillende soorten lijsten en op welke wijze je deze
+kunt toepassen.
+9. Maak gebruik van de verschillende soorten lijsten om het volgende resultaat
+op je webpagina weer te geven.
+10.Bouw een navigatiebalk door gebruik te maken uit een lijst dat bestaat uit de
+volgende onderdelen:
+○ Tigers
+○ Lions
+○ Monkeys
+○ Hippopotaumus
+11.Creëer nu voor elk onderdeel een header en een bijbehorende stuk tekst en
+zorg ervoor dat door te klikken op de links in de navigatiebalk je gerefereerd
+wordt naar het bijbehorende onderdeel. Zie hieronder een voorbeeld: 

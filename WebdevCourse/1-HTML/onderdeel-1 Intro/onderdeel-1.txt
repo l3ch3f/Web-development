@@ -1,0 +1,156 @@
+INTRO
+
+
+1. Wat is het verschil tussen het internet en het world wide web?
+De internet is een netwerk waar alle apparaten die er toegang op hebben verbonden worden. De world wide web is het systeem waarmee we verbing maken met het internet.
+
+2. Wat is het verschil tussen HTML, CSS en JavaScript?
+HTML is de structuur van een pagina/applicatie, Css geeft stijl aan de pagina/applicatie en JavaScript is de logica die de dynamic maakt van de pagina.
+
+3. Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en hoe sluit je een HTML tag. Maak hiervoor voorbeelden en leg uit.
+
+Een HTML tag is de root van een HTML document en een HTML element word gedefineerd door een start tag, content, en eind tag. <tagnaam>content</tagnaam>.
+
+
+4. HTML gebruikt basis tags om structuur op te bouwen. De <html>, <head> en <body>.
+Geef voor elke element aan waarvoor het dient.
+<html> Deze tag geeft het gehele document weer.
+<head> Deze tag is een container voor de volgende elementen: <title>, <style>, <meta>, <link>, <script> en <base>
+<body> Deze tag is een container voor de lichaam van het document.
+
+5. Op HTML elementen kun je attributen gebruiken. Wat zijn HTML attributen ? Geef
+minimaal 5 attributen en maak voorbeelden waar je de attributen in toepast.
+- Op alle HTML elementen kun attributen gebruiken.
+- Attributen geeft een element extra informatie.
+- 5 attribuut voorbeelden: name="value", href="value", src="value", width="value" en height="value".
+
+
+6. Waarom is een goede HTML Structuur belangrijk? Is deze code een goede structuur?
+Leg uit.
+Anders werkt de pagina/applicatie niet goed als de HTML structuur niet goed is opgebouwd, de browser die de eindgebruiker gebruikt weergeeft de pagina niet of de applicatie werkt niet. 
+De structuur is alsvolgt opgebouwd:
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   <HEAD>
+      <TITLE>My first HTML document</TITLE>
+   </HEAD>
+   <BODY>
+      
+   </BODY>
+</HTML>
+
+De code in de vraag heeft de basis structuur van een HTML document, alleen inhoudelijk heeft het weinig structuur van de body. Daarbij kan je meer header tags en paragraaf tags en mogelijk tabellen toevoegen om het overzichtelijk te maken.
+
+7. Wat is het verschil tussen inline en block elementen?
+inline staat tussen de regels in/element. Block elementen pakken het gehele breedte van een pagina.
+
+8. Wat betekent nesting? Codeer een voorbeeld met nesting erin.
+Zie het zo dat HTML tags boxen zijn. Nesting is dat je in een HTML tag nog een HTML tag aanbrengt, samenvattend een box in een box.
+<h1> 
+    <p>
+     content
+    </p>
+</h1>
+De paragraaf tag is genest in de h1 tag.
+
+
+
+SEMANTICS
+
+
+9. Sinds de komst van HTML5 zijn er elementen die betekenissen hebben. Wat wordt er bedoeld met HTML semantics? 
+Waarom is het gebruik van semantics belangrijk?
+Lees meer over semantics markup.
+Sementics geeft een doel aan een stuk code. Bijvoorbeel wat is het doel of rol van een HTML element.
+
+
+10.Wat voor content zou je in de volgende elementen gebruiken?
+Geef in je antwoord voor elk element een toelichting.
+● <header> een container voor introductie content. Of een navigatie balk.
+● <footer> een container voor een voetstuk van de document of section.
+● <main> een container voor de algemene content van de document.
+● <nav> een container voor de navigatie van de pagina met bijvoorbeeld links naar andere pagina's.
+● <section> een container voor een sectie stuk over een onderdeel van de pagina.
+● <aside> definitie voor content dat terzijde van andere content word geplaatst. Bijvoorbeeld: een sidebar.
+● <article> defineert onafhankelijk content dat zichzelf defineert. Bijvoorbeeld: blog post, forum post en nieuws bericht.
+
+
+HEADERS
+
+
+Het gebruik van headers is belangrijk voor zoekmachines en de gebruikers van je website.
+11. Onderzoek en leg uit waarom headers zowel belangrijk zijn voor zoekmachines als
+voor de gebruikers.
+
+Headers maken de pagina overzichtelijk en meer leesbaar. Zoekmachines zoeken op relevante keywords in headers.
+
+Voor het aanmaken van een text-header, in het Nederlands een subkop of kop, kan je gebruik
+maken van een Header tag. Je kunt verschillende grootte koppen creëren.
+
+12. Onderzoek hoe je een text-header aanmaakt en reproduceer het volgende resultaat:
+<h1>Headings opdrachten</h1>
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+
+
+PARAGRAVEN
+
+
+13.Onderzoek wat een paragraaf tag is en hoe hij gebruikt wordt.
+Geef hier een voorbeeld bij.
+Het voorbeeld: <p>content</p>
+Voornamelijk word de paragraaf tag gebruikt voor een stuk tekst, artikel, paragraaf. Zo kun je meerdere paragraven aanbrengen.
+
+14.Onderzoek en leg het verschil tussen het stoppen van alle tekst in één
+paragraaf tag, en het opsplitsen van de tekst in meerdere tags uit.
+Zo crëeer je overzichtelijk een artikel en is het beter leesbaar voor de eindgebruiker.
+
+15.Reproduceer het volgende resultaat door gebruik te maken van text-headers
+en de paragraaf tags.
+
+*** Zie onderdeel1.html ***
+<h1>Mijn eerste website</h1>
+<h2>Mijn eerste sub-kop</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore corporis deserunt voluptas qui error impedit, dolore magni ipsam ad eum sequi. Magnam fugiat quos ab, assumenda distinctio consequatur. Pariatur, minima.</p>
+<h2>Mijn tweede sub-kop</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore corporis deserunt voluptas qui error impedit, dolore magni ipsam ad eum sequi. Magnam fugiat quos ab, assumenda distinctio consequatur. Pariatur, minima.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore corporis deserunt voluptas qui error impedit, dolore magni ipsam ad eum sequi. Magnam fugiat quos ab, assumenda distinctio consequatur. Pariatur, minima.</p>
+
+
+
+HORIZONTAL RULE
+
+
+We willen nu een footer toevoegen onderaan onze pagina. Onderzoek hoe een
+horizontal rule werkt en start aan de onderstaande opdracht.
+16.Voeg een Horizontal rule toe en reproduceer het volgende resultaat.
+*** Zie onderdeel1.html ***
+
+
+LINK TAGS
+
+
+In onze footer willen we graag linken naar de TechGrounds website. Onderzoek hoe
+een link tag werkt.
+17.Voeg een link tag toe en reproduceer het volgende resultaat in de footer.
+Zodra een gebruiker op de link klikt wordt de pagina weergegeven in de huidige
+browser window. Door gebruik te maken van attributen kan de link geopend worden
+in bijvoorbeeld een nieuw tabblad. Voorbeelden van HTML attributen zijn
+bijvoorbeeld een image tag die een “alt” attribuut heeft.
+*** Zie onderdeel1.html ***
+
+18. Onderzoek welke 4 attributen een link tag kan hebben, leg uit wat deze doen
+en voeg deze als voorbeeld toe op je website.
+*** Zie onderdeel1.html ***
+De link tag kan de volgende attributen hebben:
+- href: waarbij een URL word aangegeven die een locatie defineert van de linked document.
+- media: defineert op welke apparaat de linked document weergegeven wordt.
+- sizes: zoals height en witdth
+- rel: defineert de relatie naar de document.
