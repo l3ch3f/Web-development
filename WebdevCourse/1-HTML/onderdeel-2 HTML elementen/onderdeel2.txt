@@ -32,6 +32,7 @@ JPEG, PNG, SVG, WebP, GIF, AVIF en APNG
 - Opera Mobile.
 - Samsung Internet.
 - UC Browser.
+- Internet Explorer.
 
 
 4. Onderzoek hoe het plaatsen van een foto gedaan wordt en plaats deze boven
@@ -51,33 +52,54 @@ In de sound folder staat een explosion.mp3 bestand.
 6. Laadt dit bestand in als een audio op het scherm.
 Extra: Maak het leuker door de audio op repeat te zetten.
 Tip: gebruik controls attribute om audio af te spelen.
+
 *** Zie onderdeel2.html ***
 
 Een audio bestand heeft verschillende formaten. Niet alle formaten worden
 ondersteund door de browser. Hiervoor is een oplossing voor.
+
 7. Speel een audio bestand af met <source> tag. Leg uit wat hier het voordeel
 van is.
+
+*** Zie onderdeel2.html ***
+
+- Met de tag <source> kunt u alternatieve video- / audio- / afbeeldingsbestanden specificeren waaruit de browser kan kiezen, op basis van browserondersteuning of viewport-breedte.
+
+
 8. Zoek een willekeurig video en sla dit op in je computer. Laadt dit bestand in
 als een video op het scherm.
 Tip: De video is veel groter dan het scherm. Zoek uit welke attribuut je voor de
 video element kan gebruiken om de grootte van de video aan te passen.
+
+*** Zie onderdeel2.html ***
+
 Een video bestand heeft verschillende formaten. Niet alle formaten worden
 ondersteund door de browser. Hiervoor is een oplossing voor.
 Speel een video bestand af met <source> tag. Leg uit wat hier het voordeel van is.
 
+- Met de tag <source> kunt u alternatieve video- / audio- / afbeeldingsbestanden specificeren waaruit de browser kan kiezen, op basis van browserondersteuning of viewport-breedte.
 
-Lijsten
+
+LIJSTEN
+
+
 Door gebruik te maken van lijsten in HTML kan je opsommingen eenvoudig
 weergeven. Onderzoek de verschillende soorten lijsten en op welke wijze je deze
 kunt toepassen.
 9. Maak gebruik van de verschillende soorten lijsten om het volgende resultaat
 op je webpagina weer te geven.
+
+*** Zie onderdeel2_lijsten.html ***
+
 10.Bouw een navigatiebalk door gebruik te maken uit een lijst dat bestaat uit de
 volgende onderdelen:
 ○ Tigers
 ○ Lions
 ○ Monkeys
 ○ Hippopotaumus
+
+*** Zie onderdeel2_navigatiebalk.html ***
+
 11.Creëer nu voor elk onderdeel een header en een bijbehorende stuk tekst en
 zorg ervoor dat door te klikken op de links in de navigatiebalk je gerefereerd
 wordt naar het bijbehorende onderdeel. Zie hieronder een voorbeeld: 

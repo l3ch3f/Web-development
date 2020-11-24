@@ -151,6 +151,6 @@ en voeg deze als voorbeeld toe op je website.
 *** Zie onderdeel1.html ***
 De link tag kan de volgende attributen hebben:
 - href: waarbij een URL word aangegeven die een locatie defineert van de linked document.
-- media: defineert op welke apparaat de linked document weergegeven wordt.
-- sizes: zoals height en witdth
+- download: defineert welke target er gedownload word als eindgebruiker op de hyperlink clicked.
+- type: defineert de media type van de linked document.
 - rel: defineert de relatie naar de document.
