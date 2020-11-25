@@ -18,6 +18,12 @@ p{
     font-style: italic;
 }
 
+header {
+    text-align: center;
+    width: 600px;
+    margin: auto;
+}
+
 .container {
     display: flex;
     justify-content: center;
