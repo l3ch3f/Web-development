@@ -1,0 +1,67 @@
+body {
+    background-color: lightgrey;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#opdracht1 {
+    height: 600px;
+}
+
+#menu {
+    color: red;
+    font-size: 3rem;
+}
+
+p{
+    font-style: italic;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section {
+    text-align: start;
+    margin-left: 20px;
+}
+
+.card {
+    background-color:white;
+    display: flex;
+    width: 600px;
+    height: 400px;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+.price {
+    color: red;
+    font-weight: 700;
+    font-style: normal;
+}
+
+div img {
+    height: 300px;
+    width: 300px;
+    margin-left: 20px;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+}
+
+#final {
+    height: 800px;
+    width: 1200px;
+}
