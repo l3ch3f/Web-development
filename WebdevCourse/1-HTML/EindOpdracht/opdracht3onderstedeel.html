@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Opdracht 3 onderstedeel</title>
+        <link rel="stylesheet" href="css/app3.css">
     </head>
     <body>
         <header>
@@ -14,8 +15,9 @@
             <h1>Onderste gedeelte opdracht 3</h1>
         </header>
         <main>
-            <h1>Members</h1>
-            <table>
+            <h1 class="heading">Members</h1>
+            <hr>
+            <table id="customers"
                 <tr>
                     <th>Firstname</th>
                     <th>Surname</th>
@@ -57,68 +59,66 @@
                     <td>43</td>
                 </tr>
             </table>
-            <h2>Additional information</h2>
-            <form action="">
-                <div>
+            <h2 class="heading">Additional information</h2>
+            <div id="info">
+                <div class="row">
                     <div>
                         <label for="firstname">First name:</label>
                         <br />
-                        <input type="text" />
+                        <input type="text" size="60%">
                     </div>
                      <div>
-                        <label for="Surname">Surname</label>
+                        <label for="Surname">Surname:</label>
                         <br>
-                        <input type="text">
-                    </div>
+                        <input type="text" size="30%">
+                     </div>
                     <div>
-                        <label for="Age">Age</label>
+                        <label for="Age">Age:</label>
                         <br>
-                        <input type="text">
+                        <input type="text" size="5%">
                     </div>
                 </div>
-                <div>
-                   <div>
+                <div class="row">
+                   <div >
                        <label for="company">Company:</label>
                        <br>
-                       <input type="text">
+                       <input type="text" size="30%">
                    </div>
                    <div>
                        <label for="Username">Username:</label>
                        <br>
-                       <input type="text">
+                       <input type="text" size="30%">
                    </div>
                    <div>
                        <label for="E-mail">E-mail</label>
                        <br>
-                       <input type="email" name="email" id="email">
+                       <input type="email" name="email" id="email" size="35%">
                    </div>
                 </div>
-                <div>
+                <div class="row">
                     <div>
                         <label for="Adress">Adress:</label>
                         <br>
-                        <input type="text">
+                        <input type="text" size="108%">
                     </div>
                 </div>
-                <div>
+                <div class="row">
                     <div>
-                        <label for="city">City</label>
+                        <label for="city">City:</label>
                         <br>
-                        <input type="text">
+                        <input type="text" size="33%">
                     </div>
                     <div>
                         <label for="Country">Country:</label>
                         <br>
-                        <input type="text">
+                        <input type="text" size="32%">
                     </div>
                     <div>
                         <label for="postalcode">Postalcode:</label>
                         <br>
-                        <input type="text">
+                        <input type="text" size="30%">
                     </div>
-                </div>
-
-            </form>
+                </div>           
         </main>
     </body>
 </html>
