@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"
+        defer></script>
+        <link rel="stylesheet" href="/WebdevCourse/2-CSS/src/CSS/app.css">
+    <style>
+        .exciting-text::after {
+            content: " <- EXCITING!";
+            color: green;
+        }
+
+        .boring-text::after {
+            content: " <- BORING";
+            color: red;
+        }
+
+        /* CSS files add styling rules to your content */
+
+        h1 {
+            font-style: italic;
+            color: #373fff;
+        }
+
+        video::backdrop {
+            background-color: #448;
+        }
+
+        #before~p::before {
+            content: "Read this - ";
+        }
+
+        ::selection {
+            color: red;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- navigatie -->
+        <div w3-include-html="/WebdevCourse/2-CSS/src/html/nav.html"></div>
+        <!-- header -->
+        <h1>Pseudo Elements</h1>
+        <h3>Opdracht 1</h3>
+        <p>
+            Kun je enkele voorbeelden geven van pseudo-elementen (minimaal 4)? Beschrijf met je eigen woorden wat deze
+            pseudo-elementen inhouden.
+        </p>
+    </header>
+    <!-- main inhoud -->
+    <main>
+        <ul>
+            <li>::after</li>
+            <li>::backdrop</li>
+            <li>::before</li>
+            <li>::selection</li>
+        </ul>
+        <hr>
+        <p>
+            <strong>::after</strong> maakt een pseudo-element dat het kind is van de geselecteerde element. Het is vaak
+            gebruikt om cosmetisch content toe te voegen aan een element met de 'content' property. Het heeft inline
+            default settings.
+        </p>
+        <figure>
+            <figcaption>Voorbeeld:</figcaption>
+            <code>
+                /* Add an arrow after links */ <br>
+                a::after { <br>
+                content: "→"; <br>
+                }
+                <br>
+                <br>
+                .exciting-text::after { <br>
+                content: " <- EXCITING!"; color: green; <br> 
+            } <br>
+            .boring-text::after { <br> 
+                content: " <- BORING"; <br> 
+                color: red; <br>
+            } <br>
+            </code>
+            <div>
+                <p class="boring-text">Here is some plain old boring text.</p>
+                <p>Here is some normal text that is neither boring nor exciting.</p>
+                <p class="exciting-text">Contributing to MDN is easy and fun.</p>
+            </div>
+        </figure>
+        <hr>
+        <p>
+            <strong>::backdrop</strong> backdrop is een box met de grote van de viewport welke gerendered wordt op elke
+            element op de achtergrond daarvan. Vaak goed te gebruiken bij fullscreen mode.
+        </p>
+        <figure>
+            <figcaption>Voorbeeld:</figcaption>
+            <code>
+                /* Backdrop is only displayed when dialog is opened with dialog.showModal() */ <br>
+                dialog::backdrop { <br>
+                background: rgba(255,0,0,.25); <br>
+                } <br>
+            </code>
+            <code>
+                /* CSS files add styling rules to your content */ <br>
+                <br>
+                body { <br>
+                font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif; <br>
+                margin: 2em; <br>
+                } <br>
+                <br>
+                h1 { <br>
+                font-style: italic; <br>
+                color: #373fff; <br>
+                }<br>
+                <br>
+                video::backdrop { <br>
+                background-color: #448; <br>
+                }<br>
+            </code>
+        </figure>
+        <video controls="" src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+            poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217" width="620">
+            Sorry, your browser doesn't support embedded videos. Time to upgrade!
+        </video>
+        <hr>
+        <p>
+            <strong>::before</strong> Voegt content toe bijvoorbeeld text voor de content van een geselecteerde element.
+        </p>
+        <figure>
+            <figcaption>Voorbeeld:</figcaption>
+            <code id="before">
+                p::before { <br>
+                content: "Read this: "; <br>
+                } <br>
+            </code>
+            <p>My name is Donald</p>
+            <p>I live in Ducksburg</p>
+        </figure>
+        <hr>
+        <p>
+            <strong>::selection</strong> vergelijkt de proportie van de element dat is geselecteerd door de user.
+        <figure>
+            <figcaption>Voorbeeld:</figcaption>
+            <code>
+                    ::selection { <br>
+                    color: red; <br>
+                    background: yellow; <br>
+                    } <br>
+                </code>
+        </figure>
+        <h1>Select some text on this page:</h1>
+
+        <p>This is a paragraph.</p>
+        <div>This is some text in a div element.</div>
+        </p>
+    </main>
+    <!-- script for navbar -->
+    <script src="/WebdevCourse/2-CSS/src/js/include.js"></script>
+    <script>
+        includeHTML();
+    </script>
+    <script src="/WebdevCourse/2-CSS/src/js/video.js"></script>
+</body>
+
+</html>

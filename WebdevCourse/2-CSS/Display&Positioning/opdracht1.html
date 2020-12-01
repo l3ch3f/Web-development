@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"
+        defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- navigatie -->
+        <div w3-include-html="/WebdevCourse/2-CSS/src/html/nav.html"></div>
+        <!-- header -->
+        <h1>Display & Positioning</h1>
+        <h3>Opdracht 1</h3>
+        <p>
+            Welke position properties zijn er? Leg voor elke position property uit wat het doet. Geef ook aan welke
+            default position
+            waarde elementen hebben die je gebruikt in html.
+        </p>
+    </header>
+    <!-- main inhoud -->
+    <main>
+       <p>
+           De 'position' property zijn er als volgt:
+       </p> 
+       <ul>
+           <li>static</li>
+           <li>relative</li>
+           <li>fixed</li>
+           <li>absolute</li>
+           <li>sticky</li>
+       </ul>
+       <p>
+           <strong>Static: </strong> Static geeft een positie op de normal flow van de pagina.
+       </p>
+       <p>
+           <strong>Relative: </strong> Het element heeft dan een relative positie waardoor het aangepast kan worden.
+       </p>
+       <p>
+           <strong>Fixed: </strong> Het element blijft alt op de zelfde plaats zelfs als er gescrolled wordt. En het is ook relatief gepositioneerd.
+       </p>
+       <p>
+           <strong>Absolute: </strong> Het element is relatief gepositioneerd aan de dicht bijzijnde ancestor, inplaats van de viewport als fixed.
+       </p>
+       <p>
+           <strong>Sticky:</strong> staat gepositioneerd op basis van de users scroll positie.
+       </p>
+    </main>
+    <script src="/WebdevCourse/2-CSS/src/js/include.js"></script>
+    <script>
+
+        includeHTML();
+    </script>
+</body>
+
+</html>
