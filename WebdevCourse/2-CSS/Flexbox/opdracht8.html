@@ -14,6 +14,41 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"
         defer></script>
     <link rel="stylesheet" href="/WebdevCourse/2-CSS/src/CSS/app.css">
+    <style>
+        #container {
+            display: flex;
+            flex-flow: row wrap;
+            width: 300px;
+        }
+
+        .box {
+            border: solid black 1px;
+            border-radius: 5px;
+            text-align:center;
+            padding: 40px 40px;
+            font-size: 30px;
+        }
+        #vierkant1 {
+            background-color: khaki;
+        }
+        #vierkant2 {
+            background-color: lightblue;
+        }
+        #vierkant3 {
+            background-color: lightgreen;
+        }
+        #vierkant4 {
+            background-color: white;
+        }
+        #vierkant5 {
+            background-color: black;
+            color: white;
+        }
+        #vierkant6 {
+            background: linear-gradient(to right, blue, white)
+        }
+
+    </style>
 </head>
 
 <body>
@@ -26,7 +61,15 @@
     </header>
     <!-- main inhoud -->
     <main>
-
+        <h2>Voorbeeld</h2>
+        <div id="container">
+            <div class="box" id="vierkant1">1</div>
+            <div class="box" id="vierkant2">2</div>
+            <div class="box" id="vierkant3">3</div>
+            <div class="box" id="vierkant4">4</div>
+            <div class="box" id="vierkant5">5</div>
+            <div class="box" id="vierkant6">6</div>
+        </div>
     </main>
     <!-- script for navbar -->
     <script src="/WebdevCourse/2-CSS/src/js/include.js"></script>
