@@ -14,6 +14,27 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"
         defer></script>
     <link rel="stylesheet" href="/WebdevCourse/2-CSS/src/CSS/app.css">
+    <style>
+        .box {
+            display: inline-flex;
+            background-color: green;
+            text-align: center;
+            margin-left: 10px;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: start;
+            flex-direction: row;
+            background-color: khaki;
+        }
+
+        #baseline {
+            width: auto;
+            height: 430px;
+            align-items: baseline;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,13 +47,20 @@
     </header>
     <!-- main inhoud -->
     <main>
-
-    </main>
-    <!-- script for navbar -->
-    <script src="/WebdevCourse/2-CSS/src/js/include.js"></script>
-    <script>
-        includeHTML();
-    </script>
+        <h2>Voorbeeld</h2>
+        <div class="flex" id="baseline">
+            <div class="box" style="padding: 200px 10px;">1</div>
+            <div class="box" style="padding: 100px 10px;">2</div>
+            <div class="box" style="padding: 150px 10px;">3</div>
+            <div class="box" style="padding: 160px 10px;">4</div>
+            <div class="box" style="padding: 80px 10px;">5</div>
+            <div class="box" style="padding: 90px 10px;">6</div>
+        </div>
+        <!-- script for navbar -->
+        <script src="/WebdevCourse/2-CSS/src/js/include.js"></script>
+        <script>
+            includeHTML();
+        </script>
 </body>
 
 </html>

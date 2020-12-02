@@ -14,6 +14,28 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"
         defer></script>
     <link rel="stylesheet" href="/WebdevCourse/2-CSS/src/CSS/app.css">
+    <style>
+        .box {
+            display: inline-flex;
+            background-color: green;
+            text-align: center;
+            margin-left: 10px;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: initial;
+        }
+
+        #flex {
+            width: auto;
+            height: 400px;
+            /* align-items: center; */
+        }
+    </style>
 </head>
 
 <body>
@@ -26,7 +48,15 @@
     </header>
     <!-- main inhoud -->
     <main>
-
+        <h2>Voorbeeld 1</h2>
+        <div class="flex" id="flex">
+            <div class="box" style="width: 200px;">1</div>
+            <div class="box">2</div>
+            <div class="box" style="width:50px;">3</div>
+            <div class="box" style="width:100px;">4</div>
+            <div class="box" style="width:450px;">5</div>
+            <div class="box" style="width:350px;">6</div>
+        </div>
     </main>
     <!-- script for navbar -->
     <script src="/WebdevCourse/2-CSS/src/js/include.js"></script>

@@ -14,6 +14,53 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"
         defer></script>
     <link rel="stylesheet" href="/WebdevCourse/2-CSS/src/CSS/app.css">
+    <style>
+        .box {
+            display: inline-flex;
+            background-color: green;
+            text-align: center;
+            margin-left: 10px;
+            padding: 10px;
+        }
+
+        #exception {
+            padding-left: 200px;
+            padding-right: 200px;         
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        #flexstart {
+            width: auto;
+            height: 300px;
+            align-items: flex-start;
+        }
+
+        #flexend {
+            width: auto;
+            height: 300px;
+            align-items: flex-end;
+        }
+
+        #center {
+            width: auto;
+            height: 300px;
+            align-items: center;
+        }
+
+        #stretch {
+            width: auto;
+            height: 300px;
+            align-items: stretch;
+        }
+        #baseline {
+            width: auto;
+            height: 300px;
+            align-items: baseline;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,10 +70,59 @@
         <!-- header -->
         <h1>FlexBox</h1>
         <h3>Opdracht 5</h3>
+        <p>
+            De property ‘align-items’ is een property die door flex gebruikt wordt. Maak verschillende voorbeelden door
+            gebruik te
+            maken van de align-items property.
+        </p>
     </header>
     <!-- main inhoud -->
     <main>
-
+        <h2>Voorbeeld 1 met flex-start</h2>
+        <div class="flex" id="flexstart">
+            <div class="box">1</div>
+            <div class="box" id="exception">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <h2>Voorbeeld 2 met flex-end</h2>
+        <div class="flex" id="flexend">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <h2>Voorbeeld 3 met center:</h2>
+        <div class="flex" id="center">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <h2>Voorbeeld 4 met stretch</h2>
+        <div class="flex" id="stretch">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <h2>Voorbeeld 5 met baseline</h2>
+        <div class="flex" id="baseline">
+            <div class="box" style="padding: 30px;">1</div>
+            <div class="box" style="padding-top: 100px;">2</div>
+            <div class="box" style="padding-bottom: 50px;">3</div>
+            <div class="box" style="padding-bottom: 200px;">4</div>
+            <div class="box" style="padding-bottom: 40px;">5</div>
+            <div class="box" style="padding-top: 40px;">6</div>
+        </div>
     </main>
     <!-- script for navbar -->
     <script src="/WebdevCourse/2-CSS/src/js/include.js"></script>
