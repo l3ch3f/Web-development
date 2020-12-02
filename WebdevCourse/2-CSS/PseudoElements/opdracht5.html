@@ -15,11 +15,22 @@
         defer></script>
     <link rel="stylesheet" href="/WebdevCourse/2-CSS/src/CSS/app.css">
     <style>
-        p::before{
-            content: url(/WebdevCourse/2-CSS/src/Images/spaceship.png);
-            position: relative;
+        p {
+            border: solid black 1px;
+            height: 422px;
         }
-        
+
+        p::before {
+            content: "";
+            background-image: url("https://images.unsplash.com/photo-1606768045110-fb1ff9a814a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80");
+            background-size: cover;
+            z-index: -1;
+            opacity: 0.5;
+            position: absolute;
+            height: 420px;
+            width: 300px;
+            left: 400px;
+        }
     </style>
 </head>
 
@@ -33,36 +44,33 @@
     </header>
     <!-- main inhoud -->
     <main>
-        <div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aut aliquid veniam ratione autem.
-                Accusantium sit et error minus? Ad totam, quidem quis esse fugiat voluptates deserunt. Quia minima modi
-                corporis voluptatum magni et porro tempora, iste excepturi! Minus alias fugiat possimus officiis sit
-                debitis iste ipsam delectus tempore veritatis. Eligendi delectus sed quibusdam facere laudantium
-                incidunt praesentium voluptatum, voluptates accusamus repellat dignissimos dolor atque assumenda ut
-                magni quos reiciendis eveniet iure non quisquam debitis quo fugit corporis? Dolorem provident sequi
-                vitae dolores commodi deserunt aperiam voluptatibus accusantium quas quis cumque aliquid corporis
-                reprehenderit ut, aut numquam voluptas at in, eligendi repudiandae! Iure sequi quisquam vitae aliquam
-                soluta eaque assumenda voluptate ducimus atque rem qui harum, voluptates pariatur, voluptatem maiores!
-                Tempore eos neque repellendus inventore blanditiis sit quidem voluptas, rem, illo nulla optio. Beatae
-                quod, perferendis minus quasi quisquam accusantium amet, natus libero iste ullam atque incidunt quas id.
-                Voluptatum deserunt quaerat a iste! Amet laudantium architecto eius aliquam atque repudiandae
-                asperiores, eveniet fuga, earum, quam dolore voluptate voluptates unde laborum! Itaque, vel perferendis
-                ipsam unde totam, optio ullam at beatae nemo molestias natus corporis? Rem, tenetur sunt magni doloribus
-                accusamus tempore beatae, maxime sit iste fuga voluptatibus! Minima earum officiis quasi vel eligendi
-                qui expedita nemo quidem dicta mollitia odio laboriosam ducimus, non voluptates? Officiis dolore
-                quibusdam explicabo praesentium. Enim vel, nihil perferendis rerum quo fugiat odio? Dolorem sit
-                necessitatibus minus sequi officia, dolores, perferendis omnis tempora ipsam, error distinctio maiores?
-                Suscipit reiciendis ipsa sequi sit dignissimos ratione doloremque consequuntur cupiditate accusamus
-                omnis, voluptas fuga cum, pariatur eos quasi ex voluptates magnam accusantium perferendis! Consequatur
-                eum recusandae esse! Voluptatum maiores iusto ipsa autem aut. Architecto reprehenderit accusantium omnis
-                odio dignissimos. Tenetur laboriosam debitis totam aliquam libero possimus culpa excepturi ex, iusto
-                corrupti iste aliquid vitae dignissimos, animi id. Magnam modi quis, enim esse officia laudantium
-                perspiciatis illo magni, quibusdam doloribus similique consequuntur sit doloremque, exercitationem et?
-                Error qui adipisci eveniet doloremque, iure, a culpa, 
-            </p>
-            <img src="/WebdevCourse/2-CSS/src/Images/spaceship2.png" alt="spaceship" width="500px">
-        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aut aliquid veniam ratione autem.
+            Accusantium sit et error minus? Ad totam, quidem quis esse fugiat voluptates deserunt. Quia minima modi
+            corporis voluptatum magni et porro tempora, iste excepturi! Minus alias fugiat possimus officiis sit
+            debitis iste ipsam delectus tempore veritatis. Eligendi delectus sed quibusdam facere laudantium
+            incidunt praesentium voluptatum, voluptates accusamus repellat dignissimos dolor atque assumenda ut
+            magni quos reiciendis eveniet iure non quisquam debitis quo fugit corporis? Dolorem provident sequi
+            vitae dolores commodi deserunt aperiam voluptatibus accusantium quas quis cumque aliquid corporis
+            reprehenderit ut, aut numquam voluptas at in, eligendi repudiandae! Iure sequi quisquam vitae aliquam
+            soluta eaque assumenda voluptate ducimus atque rem qui harum, voluptates pariatur, voluptatem maiores!
+            Tempore eos neque repellendus inventore blanditiis sit quidem voluptas, rem, illo nulla optio. Beatae
+            quod, perferendis minus quasi quisquam accusantium amet, natus libero iste ullam atque incidunt quas id.
+            Voluptatum deserunt quaerat a iste! Amet laudantium architecto eius aliquam atque repudiandae
+            asperiores, eveniet fuga, earum, quam dolore voluptate voluptates unde laborum! Itaque, vel perferendis
+            ipsam unde totam, optio ullam at beatae nemo molestias natus corporis? Rem, tenetur sunt magni doloribus
+            accusamus tempore beatae, maxime sit iste fuga voluptatibus! Minima earum officiis quasi vel eligendi
+            qui expedita nemo quidem dicta mollitia odio laboriosam ducimus, non voluptates? Officiis dolore
+            quibusdam explicabo praesentium. Enim vel, nihil perferendis rerum quo fugiat odio? Dolorem sit
+            necessitatibus minus sequi officia, dolores, perferendis omnis tempora ipsam, error distinctio maiores?
+            Suscipit reiciendis ipsa sequi sit dignissimos ratione doloremque consequuntur cupiditate accusamus
+            omnis, voluptas fuga cum, pariatur eos quasi ex voluptates magnam accusantium perferendis! Consequatur
+            eum recusandae esse! Voluptatum maiores iusto ipsa autem aut. Architecto reprehenderit accusantium omnis
+            odio dignissimos. Tenetur laboriosam debitis totam aliquam libero possimus culpa excepturi ex, iusto
+            corrupti iste aliquid vitae dignissimos, animi id. Magnam modi quis, enim esse officia laudantium
+            perspiciatis illo magni, quibusdam doloribus similique consequuntur sit doloremque, exercitationem et?
+            Error qui adipisci eveniet doloremque, iure, a culpa,
+        </p>
     </main>
     <!-- script for navbar -->
     <script src="/WebdevCourse/2-CSS/src/js/include.js"></script>
