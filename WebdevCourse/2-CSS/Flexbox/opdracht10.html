@@ -14,6 +14,33 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"
         defer></script>
     <link rel="stylesheet" href="/WebdevCourse/2-CSS/src/CSS/app.css">
+    <style>
+        main {
+            background-color: lightslategray;
+            margin-top: 20px;
+            margin-bottom: 200px;
+        }
+        #background {
+            background-image: url("https://www.goodcore.co.uk/blog/wp-content/uploads/2019/08/what-is-coding.png");
+            height: 100px;
+        }
+        .jumbotron {
+            text-align: center;
+        }
+        
+        .container {
+            display: flex;
+            text-align: center;
+        }
+        .card {
+            width: 400px;
+            margin-left: 20px;
+        }
+
+        .card img{
+            height: 300px;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,10 +50,42 @@
         <!-- header -->
         <h1>FlexBox</h1>
         <h3>Opdracht 10</h3>
+        <p>Nagemaakte voorbeeld</p>
+        <img src="/WebdevCourse/2-CSS/src/Images/voorbeeld.png" alt="" height="500px">
+        <hr>
     </header>
     <!-- main inhoud -->
     <main>
-
+        <!-- background banner -->
+        <div id="background"></div>
+        <!-- Banner -->
+        <div class="jumbotron">
+            <h1>Web & Application Development</h1>
+            <div class="container">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus placeat illum quod natus ipsum maiores earum dolores? Excepturi, quod reiciendis!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat officia voluptates recusandae accusamus possimus veritatis fugit sed voluptas voluptatum corporis!</p>
+            </div>
+        </div>
+        <!-- cards -->
+        <div class="container">
+            <div class="card">
+                <img src="https://media.wired.com/photos/5cc244c9af643e2f373ebb28/master/pass/Coding-Becomes-Criminal.jpg" alt="">
+                <h2>Web Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum rem earum commodi sit repudiandae architecto hic id beatae, aliquam qui est possimus adipisci enim ipsa exercitationem, velit perferendis aliquid facilis.</p>
+            </div>
+            <div class="card">
+                <img src="https://media.wired.com/photos/5cc244c9af643e2f373ebb28/master/pass/Coding-Becomes-Criminal.jpg" alt="">
+                <h2>Web Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum rem earum commodi sit repudiandae architecto hic id
+                    beatae, aliquam qui est possimus adipisci enim ipsa exercitationem, velit perferendis aliquid facilis.</p>
+            </div>
+            <div class="card">
+                <img src="https://media.wired.com/photos/5cc244c9af643e2f373ebb28/master/pass/Coding-Becomes-Criminal.jpg" alt="">
+                <h2>Web Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum rem earum commodi sit repudiandae architecto hic id
+                    beatae, aliquam qui est possimus adipisci enim ipsa exercitationem, velit perferendis aliquid facilis.</p>
+            </div>
+        </div>
     </main>
     <!-- script for navbar -->
     <script src="/WebdevCourse/2-CSS/src/js/include.js"></script>
