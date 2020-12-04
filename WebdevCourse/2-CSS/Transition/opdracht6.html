@@ -16,12 +16,12 @@
     <link rel='stylesheet' href='/WebdevCourse/2-CSS/src/CSS/app.css'>
     <style>
         img {
-            height: 200px;
+            height: 100px;
         }
 
 
         .card h3 {
-            margin-top: 20px;
+            margin-top: 10px;
             color: blue;
             font-size: 25px;
             font-weight: 500;
@@ -31,146 +31,71 @@
             background-color: blue;
             color: azure;
             height: 50px;
+            margin-bottom: 10px;
+            border-radius: 10px;
         }
 
         button:hover {
             background-color: chartreuse;
         }
 
-        main {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100vw;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            background-image: linear-gradient(90deg, #ffb170, #ff76d5);
-            font-family: Helvetica;
+            flex-direction: column;
         }
 
-        .fill-purple {
-            background-image: linear-gradient(90deg, #4addff, #a34dfe);
-        }
-
-        .fill-green {
-            background-image: linear-gradient(90deg, #ffe40c, #33d497);
-        }
-
-        .fill-blue {
-            background-image: linear-gradient(90deg, #285ca5, #18d5ff);
-        }
-
-        .fill-orange {
-            background-image: linear-gradient(90deg, #fcf595, #ff954d);
-        }
-
-        .cards {
+        .container {
             display: flex;
-            flex-direction: row;
             align-items: center;
             justify-content: center;
             position: relative;
-            height: 21.875rem;
-            width: 100%;
+            width: 110rem;
+            height: 60rem;
+            background-color: slategray;
+            border: rgb(212, 171, 68) solid 2px;
         }
 
         .card {
+            background-color: gray;
+            width: 20rem;
+            height: 35rem;
+            border-radius: 3rem;
+            border: solid yellowgreen 1px;
+            font-size: 1.7rem;
+            color: yellowgreen;
             display: flex;
-            width: 27.8125rem;
-            height: 80.25rem;
-            border-radius: 0.5rem;
-            transform-origin: center center;
-            transform: scale(1) translate(0px, 0px) perspective(750px) rotateY(0deg);
-            transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-            transition-duration: 0.5s;
-            position: absolute;
-            top: 0;
-            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
-            z-index: 3;
-            cursor: pointer;
-            overflow: hidden;
-        }
-
-        .card * {
-            pointer-events: none;
-        }
-
-        .card--left {
-            transform: scale(0.75) translate(-335px, 0px) perspective(750px) rotateY(10deg);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-        }
-
-        .card--center {
-            transform: scale(1) translate(0px, 0px) perspective(750px) rotateY(0deg);
-            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
-            z-index: 3;
-        }
-
-        .card--right {
-            transform: scale(0.75) translate(335px, 0px) perspective(750px) rotateY(-10deg);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-        }
-
-        .card__icon {
-            width: 30%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            position: relative;
-            display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+            margin-left: -7rem;
+            box-shadow: rgb(60, 85, 85) 4px 4px 12px 2px;
+            transition: all 0.2s, color 0s ease;
+            text-align: center;
         }
 
-        .card__icon:before {
-            content: attr(data-icon);
-            font-size: 3rem;
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100px;
-            height: 100px;
-            border-radius: 50px;
-            background: rgba(255, 255, 255, 1);
+        .card:hover {
+            transform: translateY(-1rem);
+            transition: 0;
         }
 
-        .card__detail {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .card:hover~.card {
+            color: red;
+            transform: translateX(7rem);
         }
 
-        @media only screen and (max-width : 736px) {
-            .cards {
-                flex-direction: column;
-                margin: auto 0;
-            }
-
-            .card {
-                display: flex;
-                width: 90%;
-            }
-
-            .card--left {
-                transform: scale(0.75) translate(0px, -150px) perspective(750px) rotateY(0) rotateX(-10deg) translateZ(-5px);
-            }
-
-            .card--center {
-                transform: scale(1) translate(0px, 0px) perspective(750px) rotateY(0deg) rotateX(0deg) translateZ(5px);
-            }
-
-            .card--right {
-                transform: scale(0.75) translate(0px, 150px) perspective(750px) rotateY(0) rotateX(10deg) translateZ(-5px);
-            }
-
-            .card__icon:before {
-                transform: scale(0.75);
-            }
-        }
+        
     </style>
 </head>
 
@@ -184,42 +109,29 @@
     </header>
     <!-- main inhoud -->
     <main>
-        
-        <div class="cards">
-            <div class="card fill-orange" data-card="0">
-                <div class="card__icon" data-icon="1"><img
-                        src="https://i.pinimg.com/originals/74/47/af/7447afc3eceda6425d7977bc4c45bdd2.gif" alt="">
-                    <h3>Super Mario Run</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus exercitationem possimus saepe sint
-                        distinctio odit necessitatibus minima facilis consequatur fugiat dolore reiciendis ab, non omnis
-                        id
-                        vero laboriosam, laudantium magnam. Obcaecati at placeat nisi perferendis delectus nam vero
-                        quasi,
-                        repudiandae perspiciatis expedita cupiditate maxime magni iusto voluptas dolor itaque cum.</p>
-                </div>
-                <div class="card__detail"><button>Play Super Mario Run</button></div>
+
+        <div class="container">
+            <div class="card card1" data-card="0">
+                <img src="https://i.pinimg.com/originals/74/47/af/7447afc3eceda6425d7977bc4c45bdd2.gif" alt="">
+                <h3>Super Mario Run</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <button>Play Super Mario Run</button>
             </div>
-            <div class="card fill-blue" data-card="1">
-                <div class="card__icon" data-icon="2"><img src="https://i.gifer.com/6UCo.gif" alt="">
-                    <h3>Mario Maker</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus exercitationem possimus saepe sint
-                        distinctio odit necessitatibus minima facilis consequatur fugiat dolore reiciendis ab, non omnis
-                        id
-                        vero laboriosam, laudantium magnam. Obcaecati at placeat nisi perferendis delectus nam vero
-                        quasi,
-                        repudiandae perspiciatis expedita cupiditate maxime magni iusto voluptas dolor itaque cum.</p>
-                </div>
-                <div class="card__detail"><button>Play Mario Maker</button></div>
+
+            <div class="card card2" data-card="1">
+                <img src="https://i.gifer.com/6UCo.gif" alt="">
+                <h3>Mario Maker</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <button>Play Mario Maker</button>
             </div>
-            <div class="card fill-green" data-card="2">
-                <div class="card__icon" data-icon="3"><img src="https://media3.giphy.com/media/wsUvl9KKYUyqsSIyuR/giphy.gif" alt="">
+            <div class="card card3" data-card="2">
+                <img src="https://media3.giphy.com/media/wsUvl9KKYUyqsSIyuR/giphy.gif" alt="">
                 <h3>Play Super Mario 3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus exercitationem possimus saepe sint
-                    distinctio odit necessitatibus minima facilis consequatur fugiat dolore reiciendis ab, non omnis id
-                    vero laboriosam, laudantium magnam. Obcaecati at placeat nisi perferendis delectus nam vero quasi,
-                    repudiandae perspiciatis expedita cupiditate maxime magni iusto voluptas dolor itaque cum.</p></div>
-                <div class="card__detail"><button>Play Super Mario 3</button></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button>Play Super Mario 3</button>
             </div>
+
         </div>
     </main>
     <!-- script for navbar -->
@@ -227,72 +139,7 @@
     <script>
         includeHTML();
     </script>
-    <script>
-        /*
-      @method Cards
-      @description this is for label based radio navigation to change the labels style to 'active'
-     */
-        const Cards = ((() => {
-            /*
-             * @description dom loaded event listener
-             */
-            window.addEventListener('DOMContentLoaded', () => { setTimeout(init, 1) }, true);
 
-            /*
-             * @method init
-             * @parameter e {event}
-             * @description initiates event listeners on all cards
-             */
-            function init(e) {
-                if (document.querySelector(".cards")) {
-                    let cards = document.querySelector(".cards");
-                    cards.addEventListener('click', clicked, false);
-                    document.querySelectorAll(".cards .card")[1].click();
-                }
-            }
-
-            /*
-             * @method clicked
-             * @parameter e {event}
-             * @description this is the callback from the assigned event listener binding
-             */
-            function clicked(e) {
-                let card = e.target;
-                if (card.getAttribute("data-card")) { rearrange(card.getAttribute("data-card")); }
-            }
-
-            /*
-             * @method rearrange
-             * @parameter card {object}
-             * @description this is the callback from the assigned event listener binding
-             */
-            function rearrange(card) {
-                let cards = document.querySelectorAll(".cards .card");
-                for (let n = 0; n < cards.length; n++) {
-                    cards[n].classList.remove("card--left");
-                    cards[n].classList.remove("card--center");
-                    cards[n].classList.remove("card--right");
-                }
-                cards[card].classList.add("card--center");
-                if (card == 0) {
-                    cards[2].classList.add("card--left");
-                    cards[1].classList.add("card--right");
-                }
-                if (card == 1) {
-                    cards[0].classList.add("card--left");
-                    cards[2].classList.add("card--right");
-                }
-                if (card == 2) {
-                    cards[1].classList.add("card--left");
-                    cards[0].classList.add("card--right");
-                }
-            }
-
-            return {
-                init
-            }
-        })());
-    </script>
 </body>
 
 </html>
