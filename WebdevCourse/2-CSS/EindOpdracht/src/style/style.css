@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.jumbotron {
+    background-image: url(/2-CSS/src/Images/cooking.jpg);
+    color: rgb(97, 135, 216);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.content1 {
+    position: relative;
+    left: 50%;
+}
+
+.content2 button {
+    width: 7%;
+    height: 50px;
+    color: inherit;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: solid 1px;
+    border-color: rgb(128, 179, 128);
+    border-radius: 5px;
+}
+
+.content2 button:nth-child(2) {
+    color:rgb(128, 179, 128);
+}
+
+
+
+body {
+    font-family: 'Lobster', cursive;
+}
+
+footer {
+    background-color: rgb(128, 179, 128);
+}
