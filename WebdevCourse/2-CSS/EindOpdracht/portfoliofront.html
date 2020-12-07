@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="src/style/app.css" />
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
     <style>
-        @media screen (max-width: 380px){
-            body {
-                background-color: green;
-            }
-        }
+
     </style>
 </head>
 
@@ -27,16 +23,24 @@
         </nav>
     </header>
     <main>
-        <article class="">
-            <h2>menu</h2>
-            <ul>
-                <li><i class="lni lni-blackboard"></i>dashboard</li>
-                <li><i class="lni lni-user"></i>user profile</li>
-                <li><i class="lni lni-users"></i>members</li>
-                <li><i class="lni lni-layers"></i>assignments</li>
-                <li><i class="lni lni-empty-file"></i>blogs</li>
-            </ul>
-        </article>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />        
+                <span></span>
+                <span></span>
+                <span></span>             
+                <ul id="menu">
+                <article> 
+                    <h2>menu</h2>
+                    <li><i class="lni lni-blackboard"></i>dashboard</li>
+                    <li><i class="lni lni-user"></i>user profile</li>
+                    <li><i class="lni lni-users"></i>members</li>
+                    <li><i class="lni lni-layers"></i>assignments</li>
+                    <li><i class="lni lni-empty-file"></i>blogs</li>
+                </ul>
+            </article>
+            </div>
+        </nav>
         <div class="container">
             <div id="card"></div>
             <img src="/1-HTML/EindOpdracht/src/Kim_Sing.png" alt="foto" id="portret" />
