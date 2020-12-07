@@ -4,175 +4,137 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eindopdracht 3</title>
-    <link rel="stylesheet" href="css/app2.css" />
+    <title>Eindopdracht onderstedeel</title>
+    <link rel="stylesheet" href="src/style/app2.css">
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="Opdracht3bovenste.html">Opdracht 3 bovenste gedeelte</a>
-            <a href="opdracht3onderstedeel.html">Opdracht 3 onderste gedeelte</a>
+            <ul>
+                <li><a href="index.html">Back to index</a></li>
+                <li><a href="portfoliofront.html">Eindopdracht bovenste gedeelte</a></li>
+                <li><a href="portfolioback.html">EindOpdracht onderste gedeelte</a></li>
+            </ul>
         </nav>
-        <h1>Bovenste gedeelte</h1>
     </header>
     <main>
+        <article>
+            <h2>menu</h2>
+            <ul>
+                <li><i class="lni lni-blackboard"></i>dashboard</li>
+                <li><i class="lni lni-user"></i>user profile</li>
+                <li><i class="lni lni-users"></i>members</li>
+                <li><i class="lni lni-layers"></i>assignments</li>
+                <li><i class="lni lni-empty-file"></i>blogs</li>
+            </ul>
+        </article>
         <div class="container">
-            <div id="card"></div>
-            <img src="src/Kim_Sing.png" alt="foto" id="portret" />
-            <section id="content">
-                <h1 id="naam">Kim Sing</h1>
-                <a href="">@chenks</a>
-                <p>
-                    "Being open minded of other solutions gains better
-                    result than using the first encountered solution"
-                </p>
-            </section>
-            <!-- icons -->
-            <section id="icon-container">
-                <div class="icon">
-                    <i class="lni lni-thumbs-up"></i> +1000
-                </div>
-                <div class="icon"><i class="lni lni-heart"></i> +999</div>
-                <div class="icon">
-                    <i class="lni lni-thumbs-down"></i> 0
-                </div>
-            </section>
-            <img src="src/grafiek.jpg" alt="grafiek" id="grafiek" />
-        </div>
-
-        <!-- rechter kant van de kaart -->
-        <section id="info">
-            <h2>Personal information</h2>
-            <table>
-                <tr>
-                    <td colspan="3">
-                        Name:
-                        <div>Kim Sing</div>
-                    </td>
-                    <td colspan="3">
-                        Surname:
-                        <div>Cheng</div>
-                    </td>
+            <h1 class="heading">Members</h1>
+            <hr>
+            <table id="customers" <tr>
+                <th>Firstname</th>
+                <th>Surname</th>
+                <th>Age</th>
                 </tr>
                 <tr>
-                    <td colspan="2">
-                        Age:
-                        <div>40</div>
-                    </td>
-                    <td>
-                        Sex:
-                        <div>M</div>
-                    </td>
-
-                    <td colspan="3">
-                        Birth of date:
-                        <div>01-01-1980</div>
-                    </td>
+                    <td>Klaas</td>
+                    <td>Jan</td>
+                    <td>34</td>
                 </tr>
                 <tr>
-                    <td colspan="3">
-                        Address:
-                        <div>Osdorpplein 16</div>
-                    </td>
-                    <td colspan="3">
-                        Postal code:
-                        <div>1234AB</div>
-                    </td>
+                    <td>Jennis</td>
+                    <td>Lee</td>
+                    <td>25</td>
                 </tr>
                 <tr>
-                    <td colspan="2">
-                        City:
-                        <div>Amsterdam</div>
-                    </td>
-
-                    <td>
-                        Country:
-                        <div>NL</div>
-                    </td>
-
-                    <td colspan="4">
-                        Profession:
-                        <div>Full stack developer</div>
-                    </td>
+                    <td>Cameron</td>
+                    <td>Liba</td>
+                    <td>16</td>
                 </tr>
                 <tr>
-                    <td colspan="3">
-                        Hobby:
-                        <div>Table tennis</div>
-                    </td>
+                    <td>Anthony</td>
+                    <td>Bos</td>
+                    <td>66</td>
+                </tr>
+                <tr>
+                    <td>Frits</td>
+                    <td>Kosnovia</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>Vezuela</td>
+                    <td>Kosnovia</td>
+                    <td>57</td>
+                </tr>
+                <tr>
+                    <td>Bosnia</td>
+                    <td>Kovic</td>
+                    <td>43</td>
                 </tr>
             </table>
-            <section>
-                <h2>Languages</h2>
-                <form action="#">
-                    <div class="rating">
-                        <label for="HTML">HTML:</label>
-                        <span class="star-rating star-5">
-                            <input type="radio" name="rating" id="HTML1" /><i></i>
-                            <input type="radio" name="rating" id="HTML2" /><i></i>
-                            <input type="radio" name="rating" id="HTML3" /><i></i>
-                            <input type="radio" name="rating" id="HTML4" /><i></i>
-                            <input type="radio" name="rating" id="HTML5" /><i></i>
-                        </span>
+            <h2 class="heading">Additional information</h2>
+            <div id="info">
+                <div class="row">
+                    <div>
+                        <label for="firstname">First name:</label>
+                        <br />
+                        <input type="text" size="60%">
                     </div>
-                    <div class="rating">
-                        <label for="CSS">CSS:</label>
-                        <span class="star-rating star-5">
-                            <input type="radio" name="css1" id="css1" /><i></i>
-                            <input type="radio" name="css2" id="css2" /><i></i>
-                            <input type="radio" name="css3" id="css3" /><i></i>
-                            <input type="radio" name="css4" id="css4" /><i></i>
-                            <input type="radio" name="css5" id="css5" /><i></i>
-                        </span>
+                    <div>
+                        <label for="Surname">Surname:</label>
+                        <br>
+                        <input type="text" size="30%">
                     </div>
-                    <div class="rating">
-                        <label for="Javascript">Javascript:</label>
-                        <span class="star-rating star-5">
-                            <input type="radio" name="Javascript1" id="Javascript1" /><i></i>
-                            <input type="radio" name="Javascript2" id="Javascript2" /><i></i>
-                            <input type="radio" name="Javascript3" id="Javascript3" /><i></i>
-                            <input type="radio" name="Javascript4" id="Javascript4" /><i></i>
-                            <input type="radio" name="Javascript5" id="Javascript5" /><i></i>
-                        </span>
+                    <div>
+                        <label for="Age">Age:</label>
+                        <br>
+                        <input type="text" size="5%">
                     </div>
-                    <div class="rating">
-                        <label for="Java">Java:</label>
-                        <span class="star-rating star-5">
-                            <input type="radio" name="Java1" id="Java1" /><i></i>
-                            <input type="radio" name="Java2" id="Java2" /><i></i>
-                            <input type="radio" name="Java3" id="Java3" /><i></i>
-                            <input type="radio" name="Java4" id="Java4" /><i></i>
-                            <input type="radio" name="Java5" id="Java5" /><i></i>
-                        </span>
+                </div>
+                <div class="row">
+                    <div>
+                        <label for="company">Company:</label>
+                        <br>
+                        <input type="text" size="30%">
                     </div>
-                    <div class="rating">
-                        <label for="Kotlin:">Kotlin:</label>
-                        <span class="star-rating star-5">
-                            <input type="radio" name="Kotlin:1" id="Kotlin:1" /><i></i>
-                            <input type="radio" name="Kotlin:2" id="Kotlin:2" /><i></i>
-                            <input type="radio" name="Kotlin:3" id="Kotlin:3" /><i></i>
-                            <input type="radio" name="Kotlin:4" id="Kotlin:4" /><i></i>
-                            <input type="radio" name="Kotlin:5" id="Kotlin:5" /><i></i>
-                        </span>
+                    <div>
+                        <label for="Username">Username:</label>
+                        <br>
+                        <input type="text" size="30%">
                     </div>
-                    <div class="rating">
-                        <label for="Groovy">Groovy:</label>
-                        <span class="star-rating star-5">
-                            <input type="radio" name="Groovy1" id="Groovy1" /><i></i>
-                            <input type="radio" name="Groovy2" id="Groovy2" /><i></i>
-                            <input type="radio" name="Groovy3" id="Groovy3" /><i></i>
-                            <input type="radio" name="Groovy4" id="Groovy4" /><i></i>
-                            <input type="radio" name="Groovy5" id="Groovy5" /><i></i>
-                        </span>
+                    <div>
+                        <label for="E-mail">E-mail</label>
+                        <br>
+                        <input type="email" name="email" id="email" size="35%">
                     </div>
-                </form>
-            </section>
-            <section>
-                <h2>Frameworks & Tools</h2>
-            </section>
-        </section>
+                </div>
+                <div class="row">
+                    <div>
+                        <label for="Adress">Adress:</label>
+                        <br>
+                        <input type="text" size="108%">
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <label for="city">City:</label>
+                        <br>
+                        <input type="text" size="33%">
+                    </div>
+                    <div>
+                        <label for="Country">Country:</label>
+                        <br>
+                        <input type="text" size="32%">
+                    </div>
+                    <div>
+                        <label for="postalcode">Postalcode:</label>
+                        <br>
+                        <input type="text" size="30%">
+                    </div>
+                </div>
+            </div>
     </main>
 </body>
 
