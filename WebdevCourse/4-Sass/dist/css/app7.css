@@ -4,6 +4,11 @@ h2 {
   text-align: center;
 }
 
+h2:hover {
+  font-size: 300px;
+  color: #004600;
+}
+
 .banner {
   font-family: "Pacifico", cursive;
   height: 400px;
@@ -18,6 +23,7 @@ h2 {
   width: 50%;
   height: 200px;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .banner .slogan span {
@@ -25,7 +31,26 @@ h2 {
   line-height: 200px;
 }
 
+.banner .slogan:hover {
+  font-weight: bold;
+  font-size: 200px;
+  color: rgba(211, 70, 234, 0.4);
+}
+
 .container {
   text-align: center;
   font-family: "Pacifico", cursive;
+}
+
+.container .icon {
+  display: inline-block;
+  margin: 2%;
+  border: 4px solid black;
+  font-size: 32px;
+  width: 300px;
+  height: 300px;
+}
+
+.container .icon:hover {
+  color: #d30000;
 }

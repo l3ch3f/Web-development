@@ -1,5 +1,7 @@
 $translucent-white: rgba(255,255,255,0.3);
 $icon-square-length: 300px;
+// adjust
+$standard-border: 4px solid black;
 
 @import url("https://fonts.googleapis.com/c
 ss?family=Pacifico");
@@ -13,7 +15,8 @@ h2 {
     background-image: url("lemonade.jpg");
     .slogan {
         position: absolute;
-        border: 4px solid rgb(0, 0, 0);
+        // adjust
+        border: $standard-border;
         top: 200px;
         left: 25%;
         width: 50%;
@@ -32,9 +35,9 @@ h2 {
     .icon {
         display: inline-block;
         margin: 2%;
-        border: 4px solid black;
+        // adjust
+        border: $standard-border;
         font-size: 32px;
-        // adjustment
         width: $icon-square-length;
         height: $icon-square-length;
     }
