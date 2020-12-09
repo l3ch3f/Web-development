@@ -4,19 +4,26 @@
 <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>opdraht 2</title>
+    <title>opdracht 2</title>
     <script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'
         integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous'
         defer></script>
-    <link rel='stylesheet' href='..dist/css/app2.css'>
+    <link rel='stylesheet' href='../dist/css/main.css'>
+    <link rel='stylesheet' href='../dist/css/app2.css'>
 </head>
 
 <body>
     <header>
         <!-- navigatie -->
+        <div w3-include-html='../src/nav.html'></div>
         <!-- header -->
         <h1>Sass Navigation</h1>
         <h3>Opdracht 2</h3>
+        <p>
+            Nest de span selector in de slogan selector en geef de span selector de volgende values: <br>
+            font-size: 24px; <br>
+            line-height: 200px; <br>
+        </p>
     </header>
     <!-- main inhoud -->
     <main>
@@ -45,7 +52,7 @@
                 </div>
     </main>
     <!-- script for navbar -->
-    <script src='/WebdevCourse/2-CSS/src/js/include.js'></script>
+    <script src='../src/include.js'></script>
     <script>
         includeHTML();
     </script>

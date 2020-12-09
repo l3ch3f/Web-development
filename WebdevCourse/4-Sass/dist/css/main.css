@@ -1,7 +1,8 @@
 body {
-  background-color: green;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  color: blue;
+header {
+  font-family: 'Courier New', Courier, monospace;
 }

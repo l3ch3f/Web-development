@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+   <html lang='en'>
+
+   <head>
+   <meta charset='UTF-8' />
+   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+   <title>opdracht 2</title>
+   <script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'
+   integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous'
+    defer></script>
+   <link rel='stylesheet' href='../dist/css/main.css'>
+   <link rel='stylesheet' href='../dist/css/app5.css'>
+   </head>
+   <body>
+   <header>
+       <!-- navigatie -->
+      <div w3-include-html='../src/nav.html'></div>
+       <!-- header -->
+       <h1>Sass Variables</h1>
+       <h3>Opdracht 2</h3>
+       <p>
+        Er zijn verschillende datatypen die je aan een variabele in CSS kunt toewijzen. Naast het <br>
+        datatype voor kleur dat we hierboven hebben gezien, zijn er ook: <br>
+        - Numbers, zoals 8.11 of 12 of bijv. 10px. Merk op dat hoewel 10 een eenheid van px <br>
+        heeft, het nog steeds als een getal wordt gelezen. <br>
+        - Strings, met en zonder aanhalingstekens. Enkele voorbeelden zijn "aardappel", <br>
+        'tomaat' of span. <br>
+        - Booleans, of simpelweg ‘true’ en ‘false’.<br>
+        - Null, wat als een lege waarde wordt beschouwd. <br>
+        Bovenin je .scss document maak je een nieuwe variabele aan van het type number met de<br>
+        naam icon-square-length en geef die een waarde 300px.<br>
+        Zorg er nu voor dat de icon selector een width en height krijgt gelijk aan de hiervoor<br>
+        gedefinieerde variabele.<br>
+       </p>
+   </header>
+   <!-- main inhoud -->
+   <main>
+           <h2>LEMONADE<h2>
+               <div class='banner'>
+                   <div class='slogan'>
+                   <span>
+                       homemade with fresh
+                       ingredients
+                       </span>
+                       </div>
+                       </div>
+                       <div class='container'>
+                       <div class='icon'>
+                       fresh lemons
+                       <img src='lemon.png'>
+                       </div>
+                       <div class='icon'>
+                       real sugar
+                       <img src='lemon.png'>
+                       </div>
+                       <div class='icon'>
+                       dad's recipe
+                       <img src='lemon.png'>
+</div>
+</div>
+   </main>
+   <!-- script for navbar -->
+   <script src='../src/include.js'></script>
+   <script>
+       includeHTML();
+    </script>
+   </body>
+
+</html>
