@@ -1,0 +1,16 @@
+@import "./colors";
+
+button {
+    width: 300px;
+    height: 130px;
+    border-radius: 40px;
+    color: $button-color;
+    background: $primary-color;
+    &:hover {
+        position: relative;
+        top: 10px;
+        color: $button-hover-color;
+        background-color: $secondary-color;
+    }
+}
+

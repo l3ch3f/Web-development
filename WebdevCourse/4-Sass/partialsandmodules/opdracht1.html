@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Document</title>
+    <link rel='stylesheet' href='../dist/css/main.css'>
+    <link rel='stylesheet' href='../dist/css/style.css'>
+</head>
+
+<body>
+    <!-- navigatie -->
+    <div w3-include-html="../src/nav.html"></div>
+    <!-- header -->
+    <h1>Sass Partials and Modules</h1>
+    <h3>Opdracht 1</h3>
+    <div class="container">
+        <p>
+            Navigeer naar het bestand genaamd “_colors.scss”. Hier zullen we enkele variabelen <br>
+            in aanmaken voor de kleur van onze webpagina. <br>
+            ● Maak een keuze uit 2 thema-kleuren en twee button kleuren, één voor de reguliere <br>
+            styling één voor de hover, voor je website. <br>
+            ● Creëer een variabele met de volgende namen: <br>
+            ○ primary-color <br>
+            ○ secondary-color <br>
+            ○ button-color <br>
+            ○ button-hover-color <br>
+        </p>
+    <h3>Opdracht 2</h3>
+        <p>
+            Navigeer naar het bestand genaamd “_button.scss“ <br>
+            ● Creëer hier een button die naar eigen wens gestyled is. Maak gebruik van de <br>
+            button-color variabele die we in opdracht 1 gedefinieerd hebben. <br>
+            (Hint: @import) <br>
+            ● Maak gebruik van de & operator voor de hover styling. <br>
+        </p>
+    </div>
+    <button class="button">Press me!</button>
+    <script src='../src/include.js'></script>
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>
