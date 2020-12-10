@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='../dist/css/main.css'>
+    <link rel='stylesheet' href='../dist/css/style3.css'>
+</head>
+
+<body>
+    <!-- navigatie -->
+    <div w3-include-html="../src/nav.html"></div>
+    <!-- header -->
+    <h1>Sass Extand and Inheritance</h1>
+    <h3>Opdracht 1</h3>
+    <div class="container">
+        <p>
+            We hebben nu zowel mixins als extends gezien die beiden styling kunnen overnemen. Lees
+            dit artikel en geef een uitleg wanneer we inheritance gebruiken en wanneer we mixins
+            gebruiken.
+
+        </p>
+        <button onclick="myFunction()" class="antwoord1">antwoord</button>
+        <div id="myDIV" style="display:none">
+            <p>
+                @extend(inheritance) gebruiken we om minder code te laten herhalen en mixins gebruiken we meer om  individuele elements andere propertys te geven die de orginele zullen overwriten.
+            </p>
+        </div>
+    </div>
+    <h3>Opdracht 2</h3>
+    <p>
+        Sass volgt dus het DRY principe. Het DRY principe wordt ook erg mooi meegenomen bij het
+        responsive designen van je website. Om een website responsive te maken met media
+        queries kunnen wij bijvoorbeeld variabelen gebruiken om eenvoud te creëren bij ons
+        responsive design. Lees dit artikel en geef een gecodeerde voorbeeld hoe je hiervan gebruik
+        kan maken in het responsive design.
+    </p>
+    
+    <button onclick="myFunction2()" class="antwoord2">antwoord2</button>
+    <div id="myDIV2" style="display:none">
+        <figure>
+            <figcaption>SCSS:</figcaption>
+        <code>
+            $break-small: 320px; <br>
+            $break-large: 800px; <br>
+            
+            .box {<br>
+            height: 100px;<br>
+            width: 100px;<br>
+            background-color: red;<br>
+            margin: 100px; <br>
+            @media screen and (max-width: $break-small) {<br>
+            width: 50px;<br>
+            height: 50px;<br>
+            background-color: blue;<br>
+            }<br>
+            @media screen and (min-width: $break-large) {<br>
+            width: 200px;<br>
+            height: 200px;<br>
+            background-color: greenyellow;<br>
+            }<br>
+            }<br>
+        </code>
+        </figure>
+        <div class="box"></div>
+    </div>
+    <script src='../src/include.js'></script>
+    <script>
+        includeHTML();
+    </script>
+    <script>
+        function myFunction() {
+                var x = document.getElementById("myDIV");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+         function myFunction2() {
+                var x = document.getElementById("myDIV2");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+    </script>
+</body>
+
+</html>

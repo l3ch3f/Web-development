@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='../dist/css/main.css'>
+    <style>
+        .antwoord p {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navigatie -->
+    <div w3-include-html="../src/nav.html"></div>
+    <!-- header -->
+    <h1>Sass Operators</h1>
+    <p>Voor alle opgaven geldt dat als je verwacht dat de code onjuist is er uitgelegd moet worden
+        hoezo deze code onjuist is en hoe het geschreven zou moeten worden voor een juist resultaat.</p>
+    <h3>Opdracht 1</h3>
+    <div class="container">
+        <p>
+            .image {
+            height: 400px * 2;
+            width: auto;
+            }
+        </p>
+        <button onclick="myFunction()">antwoord</button>
+        <div id="myDIV" style="display:none" class="antwoord">
+            <p>
+                .image {
+                height: 800px;
+                width: auto;
+                }
+            </p>
+        </div>
+    </div>
+    <h3>Opdracht 2</h3>
+    <p>
+        .image {
+        height: 400px + 100;
+        width: auto;
+        }
+    </p>
+    <button onclick="myFunction2()">antwoord2</button>
+    <div id="myDIV2" style="display:none" class="antwoord">
+        <p>
+            .image {
+            height: 500px;
+            width: auto;
+            }
+        </p>
+    </div>
+    <h3>Opdracht 3</h3>
+    <p>
+        .image {
+        height: 400px - 300px;
+        width: auto;
+        }
+    </p>
+    <button onclick="myFunction3()">antwoord3</button>
+    <div id="myDIV3" style="display:none" class="antwoord">
+        <p>
+            .image {
+            height: 100px;
+            width: auto;
+            }
+        </p>
+    </div>
+    <h3>Opdracht 4</h3>
+    <p>
+        .image {
+        height: 200px + 100px - 400px;
+        width: auto;
+        }
+    </p>
+    <button onclick="myFunction4()">antwoord4</button>
+    <div id="myDIV4" style="display:none" class="antwoord">
+        <p>
+            .image {
+            height: 200px + 100px - 400px;
+            width:auto;
+        </p>
+        <p>
+            De element inherit de size van de width en veranderd niks aan de height.
+        </p>
+    </div>
+    <h3>Opdracht 5</h3>
+    <p>
+        .image {
+        height: 200px * 3;
+        width:auto;
+    </p>
+    <button onclick="myFunction5()">antwoord5</button>
+    <div id="myDIV5" style="display:none" class="antwoord">
+        <p>
+            .image {
+            height: 600px;
+            width:auto;
+        </p>
+        <p>De height vermenigvuldigd met 3</p>
+    </div>
+    <h3>Opdracht 6</h3>
+    <p>
+        .image {
+        height: 750px * 1px;
+        width: auto;
+        }
+    </p>
+    <button onclick="myFunction6()">antwoord6</button>
+    <div id="myDIV6" style="display:none" class="antwoord">
+        <p>
+        .image {
+        height: 750px;
+        width: auto;
+        }
+        </p>
+    </div>
+    <h3>Opdracht 7</h3>
+    <p>
+        .image {
+        height: 30px / 5px;
+        width: 24px/ 4;
+        }
+    </p>
+    <button onclick="myFunction7()">antwoord7</button>
+    <div id="myDIV7" style="display:none" class="antwoord">
+        <p>
+            .image {
+                height: 6px;
+                width: 6px;
+            }
+        </p>
+    </div>
+    <h3>Opdracht 8</h3>
+    <p>
+        .image {
+        height: (30px / 5px);
+        width: (24px/ 4);
+        }
+    </p>
+    <button onclick="myFunction8()" >antwoord8</button>
+    <div id="myDIV8" style="display:none" class="antwoord">
+        <p>
+            .image {
+            height: 6px;
+            width: 6px;
+            }
+        </p>
+    </div>
+    <!-- JS -->
+    <script src='../src/include.js'></script>
+    <script>
+        includeHTML();
+    </script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function myFunction2() {
+            var x = document.getElementById("myDIV2");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function myFunction3() {
+            var x = document.getElementById("myDIV3");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function myFunction4() {
+            var x = document.getElementById("myDIV4");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function myFunction5() {
+            var x = document.getElementById("myDIV5");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function myFunction6() {
+            var x = document.getElementById("myDIV6");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function myFunction7() {
+            var x = document.getElementById("myDIV7");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function myFunction8() {
+            var x = document.getElementById("myDIV8");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
