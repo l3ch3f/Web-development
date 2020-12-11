@@ -1,0 +1,12 @@
+@import "../variables/background";
+@import "../variables/colors";
+@import "../variables/sizes";
+
+.jumbotron {
+    background-image: $jumbotronurl;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $primarycolor;
+    height: $jumbotronheightm;
+}

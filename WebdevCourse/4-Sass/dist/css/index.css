@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lobster", cursive;
+}
+
+.__title1 {
+  font-size: 5em;
+}
+
+.title2 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.__content1 {
+  position: relative;
+  left: 50%;
+}
+
+.__card {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  border: none;
+  font-weight: bold;
+  margin-left: 10%;
+}
+
+.__card .__pizza {
+  width: 60%;
+  border-radius: 50%;
+}
+
+.__card .button3 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
+}
+
+.button {
+  width: 100px;
+  height: 50px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.__button1 {
+  color: #6187d8;
+  border: solid 1px #6187d8;
+}
+
+.__button2 {
+  color: #80b380;
+  border: solid 1px #80b380;
+}
+
+.jumbotron {
+  background-image: url(/2-CSS/src/Images/cooking.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #6187d8;
+  height: 400px;
+}
+
+.__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+  margin: 1% 5%;
+}
+
+.footer {
+  background-color: #80b380;
+  color: #6187d8;
+  padding: 5%;
+}
+
+.footer .container {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer .__ul {
+  list-style: none;
+  letter-spacing: 2px;
+}
+
+.__footernav a {
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+i {
+  margin-left: 5px;
+}

@@ -1,0 +1,21 @@
+@import "../variables/background";
+@import "../variables/colors";
+@import "../variables/sizes";
+
+
+.button {
+    width: $btnwidthm;
+    height: $btnheightm;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.__button1 {
+    color: $primarycolor;
+    border: $brdblue;
+}
+.__button2 {
+    color: $secondarycolor;
+    border: $brdgreen;
+}

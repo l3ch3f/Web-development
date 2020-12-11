@@ -1,0 +1,29 @@
+@import "../variables/typography";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $fonttype;
+}
+
+.__title1 {
+    font-size: $fontbig;
+}
+
+.title2 {
+    font-size: $fontsmall;
+    text-align: center;
+}
+
+.container {
+    display:flex;
+    
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+}

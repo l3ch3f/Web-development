@@ -1,0 +1,28 @@
+@import "../variables/colors";
+
+
+.footer {
+    background-color: $secondarycolor;
+    color: $primarycolor;
+    padding: 5%;
+    .container {
+        justify-content: space-around;
+    }
+    .__ul {
+        list-style: none;
+        letter-spacing: 2px;
+    }
+}
+.__footernav {
+    a {
+        text-decoration: none;
+        color: inherit;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+}
+
+i {
+    margin-left: 5px;
+}
+

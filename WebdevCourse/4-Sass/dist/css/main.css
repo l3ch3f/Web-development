@@ -7,3 +7,7 @@ header {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.image {
+  height: 6px;
+  width: 6px;
+}
