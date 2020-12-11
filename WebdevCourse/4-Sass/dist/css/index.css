@@ -35,6 +35,7 @@ body {
 .__content1 {
   position: relative;
   left: 50%;
+  width: 40%;
 }
 
 .__card {
