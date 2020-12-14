@@ -1,0 +1,14 @@
+Wat ik wil leren van de TechgroundsCourse:
+
+1 Java.
+2 Springboot
+3 Servers op zetten met digital ocean.
+4 Deployment naar digital ocean.
+5 Javascript blijven oefenen.
+6 Voorbeeld project bouw netflix na.
+7 Voorbeeld bouw een blog systeem met MYsql.
+8 Voorbeeld hoe bouw ik een veilige manier om form input naar een mail met nodejs.
+9 Unit Testing.
+10 Het verbeteren van mijn presentatie skills richting mijn peers.
+11 Wat heb ik verder nodig om lead developer te worden?
+
