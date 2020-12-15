@@ -45,7 +45,7 @@ h2 {
 .container {
     text-align: center;
     font-family: "Pacifico", cursive;
-    .icon {
+    &icon {
         display: inline-block;
         margin: 2%;
         // adjust

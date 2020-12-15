@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class W1d1 extends JFrame{
-    public static void main ( String args[] ) {
+    public static void main( String args[] ) {
         JFrame frame= new W1d1();
         frame.setSize( 400,200 );
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
