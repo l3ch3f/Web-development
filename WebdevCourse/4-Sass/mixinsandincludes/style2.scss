@@ -14,10 +14,10 @@
     height: 200px;
     transform: translateX(200px);
 }
+
 .colorChangingSquare {
     @include box-init;
     &:hover {
         @include box-hover;
     }
-
 }
