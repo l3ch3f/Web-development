@@ -1,0 +1,21 @@
+input {
+    width: 250px;
+}
+
+h1 {
+    color: green;
+    text-decoration: underline;
+}
+/*  */
+label {
+    font-style: bold;
+}
+.verplicht {
+    color: red;
+}
+a {
+    text-decoration: none;
+}
+.logo {
+    border: 1px solid green;
+}
