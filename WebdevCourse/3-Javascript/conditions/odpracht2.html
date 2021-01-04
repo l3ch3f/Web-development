@@ -17,8 +17,11 @@
         function checkNumber() {
             let numberInput = document.getElementById('number').value;
             let label = document.getElementById('label');
+
             if (numberInput == 3) {
                 label.innerText = "Het ingevoerde getal is gelijk aan 3";
+            } else if (numberInput > 4) {
+                 label.innerText = "Het ingevoerde getal is groter aan 4";
             }
         };
     </script>
