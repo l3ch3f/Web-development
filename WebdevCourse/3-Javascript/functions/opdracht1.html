@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    Opdracht 1: <br>
+    Schrijf een functie die de tekst “hello world” in de console uitprint. Geef een goede functie<br>
+    naam ervoor.<br>
+    <b>
+        function name = logHello.
+    </b>
+    Opdracht 2:<br>
+    Schrijf een functie waarbij je een tekst mee kan geven aan de functie. Print vervolgens de<br>
+    tekst uit in de console.<br>
+    <b>
+        function name = giveTextToFunc.
+    </b>
+    Opdracht 3:<br>
+    Schrijf een functie waarbij je een getal mee kan geven aan de functie. Print vervolgens het<br>
+    getal uit in de console.<br>
+    <b>
+        function name = giveIntToFunc.
+    </b>
+    Opdracht 4:<br>
+    Schrijf een functie die twee getallen met elkaar vermenigvuldigt en geef de waarde van de<br>
+    vermenigvuldiging terug. Geef een goede functie naam ervoor.<br>
+    <b>
+        function name = multiply.
+    </b>
+    Opdracht 5:<br>
+    Schrijf een functie waarbij je een naam kan meegeven aan de functie. De functie moet<br>
+    vervolgens controleren of de naam een bekende is.<br>
+    De namen die bekend zijn:<br>
+    ● John<br>
+    ● Olly<br>
+    ● Mo<br>
+    ● Hendrik<br>
+    ● Tony<br>
+    <b>
+        function name = checkName. <br>
+        & <br>
+        function name = randomName.
+    </b>
+    Hoe geef je 2 of meer parameters mee aan een functie? Geef een voorbeeld. <br>
+    Wat zijn rest parameters? Geef een voorbeeld. <br>
+    Wat is het verschil tussen rest parameters en expliciete parameters die je aangeeft bij een <br>
+    functie? <br>
+    <b>
+        Dat doe je tussen de paranthesis met een comma ' , ' onderscheiden zoals: <br>
+    function answer( /parameter1/ , /parameter2/ ) {  <br>
+  <br>
+    
+    randomName(randomNum()); <br>
+    } <br>
+    </b>
+    <p id="answer"></p>
+    <button onclick="answer()">click</button>
+    <script>
+        function answer() {
+            // Aanroepen van de functies
+            
+            randomName(randomNum());
+        }
+        const logHello = () => {
+            console.log('Hello World')
+        };
+        const giveTextToFunc = (text) => {
+            console.log(text);
+        };
+        const giveIntToFunc = (int) => {
+            console.log(int);
+        };
+        const multiply = (a , b) => {
+            console.log("De uitkomst van a vermenigvuldigd door b = " + (a * b));
+        };
+        const checkName = (name) => {
+            const names = ["John", "Olly", "Mo", "Hendrik", "Tony"]  
+            let displayAnswer = document.getElementById('answer');  
+            let displayName = document.getElementById('answer');
+            if (names.includes(name) == true ) {
+                displayAnswer.innerHTML = `Dit is een bekende van ons: ${name}`;
+            } else {
+                displayAnswer.innerHTML = "Onbekend in ons systeem";
+            }
+        };
+        const randomNum = () => {
+            num = parseInt(Math.round((Math.random()) * 8));
+            return num;
+        };
+        const randomName = (num) => {
+            let name ="";
+            switch (num) {
+                case 1:
+                    name = "John";
+                    break;
+                case 2:
+                    name = "Oly";
+                    break;
+                case 3:
+                    name = "Mo";
+                    break;
+                case 4:
+                    name = "Hendrik";
+                    break;
+                case 5:
+                    name = "Tony";
+                    break;
+                case 6:
+                    name = "Irus";
+                    break;
+                case 7:
+                    name = "Jan";
+                    break;
+                case 8:
+                    name = "Peter";
+                    break;
+            }
+            console.log(name);
+        };
+    </script>
+
+</body>
+</html>

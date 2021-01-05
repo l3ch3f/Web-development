@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        table {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="tbl_id" style="text-align:center" align="center" valign:"top">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+    </table>
+    <input type="text" name="users" id="field" /><br />
+    <input type="submit" id="mysubmit" value="Submit" onClick="addMoreRows()" />
+    <script>
+        const h1 = document.createElement("h1");
+        const input = document.querySelector("#field");
+        const input2 = document.querySelector("#mysubmit");
+        // input.addEventListener('click', (e) => {
+        //   document.body.appendChild(h1);
+        //   if(input.value === ''){
+        //       h1.innerText = 'Enter Your Username';
+        //   } else{
+        //     h1.innerText = `${input.value}`;
+        //   }
+        // })
+        function addMoreRows() {
+            const rowsAdded = document.getElementById("user_id");
+            for (let x = 0; x < 2; x++) {
+                const newRow = document.getElementById("tbl_id").insertRow();
+                let newCell = newRow.insertCell();
+                newCell.innerHTML =
+                    "<tr><td><input type='text' name='user_name'></td></tr>";
+                newCell = newRow.insertCell();
+                newCell.innerHTML =
+                    "<tr><td><input type='text' name='score'></td></tr>";
+            }
+        }
+    </script>
+</body>
+
+</html>
