@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=	">
+    <title>Javascript</title>
+</head>
+<body>
+    Opdracht 7: <br>
+    Wanneer je een getal hebt ingevoerd en bij de label verschijnt er een tekst, dan blijft de tekst <br>
+    voor altijd staan tenzij je de tekst van de label expliciet weghaalt. Schrijf de code van <br>
+    opdracht 1 t/m 4 zo dat als de conditie niet waar is dat de tekst van de label verwijdert<br>
+    wordt.<br>
+    <b>
+         else if (numberInput !==3) { <br>
+        label.innerText = ""; <br>
+        } <br>
+    </b>
+    <input type="number" name="number" id="number">
+    <button id="btn" onclick="checkNumber()">Button</button>
+    <div>
+        <span id="label"></span>
+    </div>
+    <script>
+        function checkNumber() {
+            let numberInput = document.getElementById('number').value;
+            let label = document.getElementById('label');
+
+            if (numberInput == 3) {
+                label.innerText = "Het ingevoerde getal is gelijk aan 3";
+            } else if (numberInput > 4) {
+                label.innerText = "Het ingevoerde getal is groter aan 4";
+            } else if (numberInput >= 11) {
+                label.innerText = "Het ingevoerde getal is groter  of gelijk aan 11";
+            } else if (numberInput !==3) {
+                label.innerText = "";
+            } else {
+                label.innerText = "Het ingevoerde getal is kleiner dan 3";
+            }
+        };
+    </script>
+
+</body>
+</html>
