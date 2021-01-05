@@ -232,12 +232,13 @@
             joyceResultaat();
             garethResultaat();
         };
+        
         const changeNum = (obj) => {
             let cijfer = obj.querySelector("span").innerHTML;
             let newcijfer = parseInt(cijfer)
             //Condition to check if num is between 1 and 10
             let updatecijfer = prompt('Wat is de nieuwe cijfer', newcijfer)
-            while (updatecijfer < 0 || updatecijfer > 11) {
+            while (updatecijfer < 0 || updatecijfer > 10) {
                 updatecijfer = prompt('Invalid input try again. Number must between 1-10')
             }
             obj.querySelector('span').innerHTML = updatecijfer;
@@ -310,6 +311,8 @@
             let resultaat1 = (cijfer1 + cijfer2 + cijfer3 + cijfer4) / 4;
             // display in nieuwe tabel.
             samanthaResultaat.innerHTML = resultaat1;
+           
+            
         };
         // gemiddelde resultaat berekenen van joyce.
         const joyceResultaat = () => {
@@ -327,6 +330,7 @@
             let resultaat1 = (cijfer1 + cijfer2 + cijfer3 + cijfer4) / 4;
             // display in nieuwe tabel.
             joyceResultaat.innerHTML = resultaat1;
+            markGrade(resultaat1, joyceResultaat, cijfer1, cijfer2, cijfer3, cijfer4, joyceTbl1, joyceTbl2, joyceTbl3, joyceTbl4)
         };
         // gemiddelde resultaat berekenen van Gareth.
         const garethResultaat = () => {
@@ -336,24 +340,37 @@
             const garethTbl3 = document.getElementById('nederlands__cijfer6');
             const garethTbl4 = document.getElementById('engels__cijfer6');
             const garethResultaat = document.getElementById('resultaat6');
-            let cijfer2 = parseInt(garethTbl2.querySelector('span').innerHTML);
             let cijfer1 = parseInt(garethTbl1.querySelector('span').innerHTML);
+            let cijfer2 = parseInt(garethTbl2.querySelector('span').innerHTML);
             let cijfer3 = parseInt(garethTbl3.querySelector('span').innerHTML);
             let cijfer4 = parseInt(garethTbl4.querySelector('span').innerHTML);
             // tel ze allemaal bij elkaar op en verdeel naar gemiddelde
             let resultaat1 = (cijfer1 + cijfer2 + cijfer3 + cijfer4) / 4;
             // display in nieuwe tabel.
-            garethResultaat.innerHTML = resultaat1;
-                         
+            garethResultaat.innerHTML = resultaat1;   
+            markGrade(resultaat1, garethResultaat, cijfer1, cijfer2, cijfer3,cijfer4, garethTbl1, garethTbl2, garethTbl3, garethTbl4)                   
         };
+         // function to mark cells with a color.
+            const markGrade = (resultaat1, persoon, cijfer1, cijfer2, cijfer3, cijfer4, tbl1, tbl2, tbl3,tbl4) => {
+                if (resultaat1 < 5.5) {
+                    persoon.style.backgroundColor = "red";
+                } 
+                if (cijfer1 < 5.5) {
+                    tbl1.style.backgroundColor = "red";
+                } 
+                if (cijfer2 < 5.5) {
+                    tbl2.style.backgroundColor = "red";
+                }
+                if (cijfer3 < 5.5) {
+                    tbl3.style.backgroundColor = "red";
+                } 
+                if (cijfer4 < 5.5) {
+                    tbl4.style.backgroundColor = "red";
+                }
+            }
         main();
         
-        // function to mark cells with a color.
-        const markGrade = () => {
-            if (cijfer1 < 5.5 || cijfer2 < 5.5 || cijfer3 < 5.5 || cijfer4 < 5.5) {  
-                
-            } 
-        }
+       
 
     </script>
 </body>
