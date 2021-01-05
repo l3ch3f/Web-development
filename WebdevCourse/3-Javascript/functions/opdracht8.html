@@ -260,6 +260,7 @@
             let resultaat1 = (cijfer1 + cijfer2 + cijfer3 + cijfer4) / 4;
             // display in nieuwe tabel.
             willemResultaat.innerHTML = resultaat1;
+            markGrade(resultaat1, willemResultaat, cijfer1, cijfer2, cijfer3, cijfer4, willemTbl1, willemTbl2, willemTbl3, willemTbl4) 
         };
         // gemiddelde resultaat berekenen van Jan.
         const janResultaat = () => {
@@ -277,6 +278,7 @@
             let resultaat1 = (cijfer1 + cijfer2 + cijfer3 + cijfer4) / 4;
             // display in nieuwe tabel.
             janResultaat.innerHTML = resultaat1;
+            markGrade(resultaat1, janResultaat, cijfer1, cijfer2, cijfer3, cijfer4, janTbl1, janTbl2, janTbl3, janTbl4) 
         };
         // gemiddelde resultaat berekenen van Kim sing.
         const kimSingResultaat = () => {
@@ -294,6 +296,7 @@
             let resultaat1 = (cijfer1 + cijfer2 + cijfer3 + cijfer4) / 4;
             // display in nieuwe tabel.
             kimSingResultaat.innerHTML = resultaat1;
+            markGrade(resultaat1, kimSingResultaat, cijfer1, cijfer2, cijfer3, cijfer4, kimSingTbl1, kimSingTbl2, kimSingTbl3, kimSingTbl4) 
         };
         // gemiddelde resultaat berekenen van samantha.
         const samanthaResultaat = () => {
@@ -312,7 +315,7 @@
             // display in nieuwe tabel.
             samanthaResultaat.innerHTML = resultaat1;
            
-            
+            markGrade(resultaat1, samanthaResultaat, cijfer1, cijfer2, cijfer3, cijfer4, samanthaTbl1, samanthaTbl2, samanthaTbl3, samanthaTbl4) 
         };
         // gemiddelde resultaat berekenen van joyce.
         const joyceResultaat = () => {
@@ -352,25 +355,53 @@
         };
          // function to mark cells with a color.
             const markGrade = (resultaat1, persoon, cijfer1, cijfer2, cijfer3, cijfer4, tbl1, tbl2, tbl3,tbl4) => {
+                // resultaat vlak
                 if (resultaat1 < 5.5) {
                     persoon.style.backgroundColor = "red";
-                } 
+                } else if (resultaat1 >= 5.5 && resultaat1 < 7.5){
+                    persoon.style.backgroundColor = "lightgreen";
+                } else {
+                    persoon.style.backgroundColor = "darkgreen";
+                }
+                // wiskunde vak
                 if (cijfer1 < 5.5) {
                     tbl1.style.backgroundColor = "red";
-                } 
+                } else if (cijfer1 >= 5.5 && cijfer1 < 7.5) {
+                    tbl1.style.backgroundColor = "lightgreen";
+                } else {
+                    tbl1.style.backgroundColor = "darkgreen";
+                }
+                // natuurkunde
                 if (cijfer2 < 5.5) {
                     tbl2.style.backgroundColor = "red";
+                } else if (cijfer2 >= 5.5 && cijfer2 < 7.5) {
+                    tbl2.style.backgroundColor = "lightgreen";
+                } else {
+                    tbl2.style.backgroundColor = "darkgreen";
                 }
+                // nederlands
                 if (cijfer3 < 5.5) {
                     tbl3.style.backgroundColor = "red";
-                } 
+                } else if (cijfer3 >= 5.5 && cijfer3 < 7.5) {
+                    tbl3.style.backgroundColor = "lightgreen";
+                } else {
+                    tbl3.style.backgroundColor = "darkgreen";
+                }
+                // engels
                 if (cijfer4 < 5.5) {
                     tbl4.style.backgroundColor = "red";
+                } else if (cijfer4 >= 5.5 && cijfer4 < 7.5) {
+                    tbl4.style.backgroundColor = "lightgreen";
+                } else {
+                    tbl4.style.backgroundColor = "darkgreen";
                 }
             }
         main();
         
-       
+    // if (this.value < 5.5) {
+    //         this.parentElement.style.background = "red";
+    //     } else if (this.value >= 5.5 && this.value < 7.5) {
+    //         this.parentElement.style.background = 
 
     </script>
 </body>
