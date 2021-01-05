@@ -253,7 +253,7 @@
             //Condition to check if num is between 1 and 10
             let updatecijfer = prompt('Wat is de nieuwe cijfer', newcijfer)
             while (updatecijfer < 1 || updatecijfer > 10 || isNaN(updatecijfer)) {
-                // infinoote loop if the person doesnt input the right number
+                // infinite loop if the person doesnt input the right number
                 updatecijfer = prompt('Invalid input try again. Number must between 1-10')
             }
             obj.querySelector('span').innerHTML = updatecijfer;
