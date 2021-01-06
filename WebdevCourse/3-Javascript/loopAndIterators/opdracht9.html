@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops opdracht 9</title>
+</head>
+<body>
+    <script>
+        let myArray = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
+
+
+        function bubble_Sort(a) {
+                let swapp;
+                let n = a.length + 1;
+                let x = a;
+                do {
+                    swapp = false;
+                    for (var i = 0; i < n; i++) {
+                        // dit is de waarde waarbij je het kan veranderen:
+                        if (x[i] > x[i + 1]) {
+                            let temp = x[i];
+                            x[i] = x[i + 1];
+                            x[i + 1] = temp;
+                            swapp = true;
+                        }
+                    }
+                    n++;
+                } while (swapp);
+                return x;
+            }
+            console.log(bubble_Sort([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]));
+            console.log(bubble_Sort(myArray));
+    </script>
+</body>
+</html>

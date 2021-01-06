@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="clubs" class="clubs"></div>
+    <script>
+        const Club5 = {
+            adres: "FC Knudde",
+            type: "voetbal",
+            leden: 22,
+            gegevens: {
+                adres: "dorp2",
+                telefoon: 02312,
+                contactpersoon: "Kim sing"
+            }
+        }
+
+        console.log(Club5);
+        const ClubGegevens = function (adres, telefoon, contact) {
+            this.adres = adres,
+            this.telefoon = telefoon,
+            this.contact = contact
+        }
+
+        const Club = function (name, type, leden) {
+            this.name = name,
+            this.type = type,
+            this.leden = leden,
+            new ClubGegevens(this)
+        }
+        const Club1 = new Club("asta", "voetbal", 22);
+        const Club2 = new Club("fcknudde", "basketbal", 1);
+        const Club3 = new Club("test", "testing", 12);
+        const Club4 = new Club("motoGp", "motor", 2, "hahahs");
+        
+        let mijnLijst = [Club1, Club2, Club3, Club4]
+
+        for (let i = 0; i < mijnLijst.length; i++) {
+            console.log(mijnLijst[i].name);
+
+        }
+        
+        
+        
+
+    </script>
+</body>
+
+</html>
