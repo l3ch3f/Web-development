@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    Opdracht 1: <br>
+    Kijkend naar de volgende code:<br>
+    function printCar() {<br>
+    const carBrand = "Volvo";<br>
+    }<br>
+    console.log(carBrand);<br>
+Wat wordt er in de console gelogt? Wat voor scoping heb je hier te maken?<br>
+<b>
+    carBrand word niet gelogd doordat het binnen de scope van de functie is dat blockscope heeft.
+</b>
+Opdracht 2:<br>
+Kijkend naar de volgende code:<br>
+let carName;<br>
+function printCar() {<br>
+carBrand = "Volvo";<br>
+}<br>
+console.log(carBrand);<br>
+Wat wordt er in de console gelogt?<br>
+<b>
+    carBrand word niet gelogd en geeft een error aan dat carBrand ondefined is. Dat komt door dat het zelfde als opdracht 1 alleen de variabele carName is buiten op de global scope.
+</b>
+Opdracht 3:<br>
+Kijkend naar de volgende code:<br>
+function printCar() {<br>
+carBrand = "Volvo";<br>
+}<br>
+printCar();<br>
+console.log(carBrand);<br>
+Wat wordt er in de console gelogt?<br>
+<b>
+    Volvo en undefined.
+</b>
+Opdracht 4:<br>
+Kijkend naar de volgende code:<br>
+function printCar() {<br>
+carBrand = "Volvo";<br>
+return function(type) {<br>
+console.log(carBrand + " " + type);<br>
+}<br>
+}<br>
+const car = printCar();<br>
+car("v40");<br>
+Wat wordt er in de console gelogt? Hoe is dit anders voorgaande opdrachten?<br>
+<b>
+VM51:4 Volvo v40 en undefined. Doordat de functie in een variabele statement zit en vervolgens weer opgeroepen wordt met Parameters.
+</b>
+</body>
+</html>
