@@ -20,11 +20,11 @@
 
             if (numberInput == 3) {
                 label.innerText = "Het ingevoerde getal is gelijk aan 3";
-            } else if (numberInput > 4) {
-                label.innerText = "Het ingevoerde getal is groter aan 4";
             } else if (numberInput >= 11) {
                 label.innerText = "Het ingevoerde getal is groter  of gelijk aan 11";
-            } else {
+            }else if (numberInput > 4) {
+                label.innerText = "Het ingevoerde getal is groter aan 4";
+            }  else {
                 label.innerText = "Het ingevoerde getal is kleiner dan 3";
             }
         };
