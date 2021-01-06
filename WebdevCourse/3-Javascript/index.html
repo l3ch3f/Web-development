@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <input type="number" name="number" id="number">
+    <button id="btn" onclick="checkNumber()">Button</button>
+    <div>
+        <span id="label"></span>
+    </div>
+    <script>
+        function checkNumber() {
+                const numberInput = document.getElementById('number').value;
+                const label = document.getElementById('label');
+                
+                if (numberInput == 3) {                    
+                    label.innerText = "<h1>HALLLOOOO</h1>";               
+                }
+
+               
+            };
+
+    </script>
+</body>
+
+</html>

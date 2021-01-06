@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+
+    <p>
+        De index van appel is [3].
+    </p>
+    <script>
+        let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        console.log(myArray);
+        let mySecondArray = ["banaan", "aardbei", "peer", "appel", "citroen"];
+        console.log(mySecondArray);
+        console.log(mySecondArray[1]);
+        let randomNum = parseInt(Math.round((Math.random()) * (myArray.length)));
+        let moduloNum = randomNum % mySecondArray.length;
+        console.log(moduloNum);
+        console.log(mySecondArray[moduloNum]);
+        [mySecondArray[0], mySecondArray[2] ]= [mySecondArray[2], mySecondArray[0]] ;
+        console.log(mySecondArray);
+    </script>
+</body>
+
+</html>
