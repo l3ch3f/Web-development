@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+    <title>Loops</title>
+</head>
+
+<body>
+    Opdracht 1: <br>
+    Maak gebruik van een loop en itereer de sports array heen. Print het 1 voor 1 uit in jouw<br>
+    console.<br>
+    <div class="answers" id="answer[vraag1]">1</div>
+    Opdracht 2:<br>
+    Maak een for-loop die alleen even getallen van 0 t/m 20 in je console uitprint.<br>
+    <div class="answers" id="answer[vraag2]"></div>
+    Opdracht 3:<br>
+    Maak gebruik van een loop en itereer door de sports array heen. Itereer de loop met even<br>
+    getallen en print de waarde in jouw console uit.<br>
+    <div class="answers" id="answer[vraag3]"></div>
+    Opdracht 4:<br>
+    Maak opdracht 1, maar maak nu gebruik van een while loop.<br>
+    <div class="answers" id="answer[vraag4]"></div>
+    Opdracht 5:<br>
+    Maak opdracht 1, maar maak nu gebruik van een for...in loop.<br>
+    <div class="answers" id="answer[vraag5]"></div>
+    Opdracht 6:<br>
+    Maak opdracht 1, maar maak nu gebruik van een for...of loop.<br>
+    <div class="answers" id="answer[vraag6]"></div>
+    Opdracht 7:<br>
+    ● Maak een while loop die 3x itereert<br>
+    ● Binnen de while loop maak je een for-loop die 10x itereert<br>
+    ● Bij de eerste while iteratie wil ik dat de getallen 1,2,3,4,5,6,7,8,9,10 in je console<br>
+    uitgeprint wordt<br> <b>vanaf ln 98</b><br>
+    ● Bij de tweede while iteratie wil ik dat de getallen 2,4,6,8,10,12,14,16,18,20 in je<br>
+    console uitgeprint wordt<br><b>vanaf ln 105</b><br>
+    ● Bij de derde while iteratie wil ik dat de getallen 3,6,9,12,15,18,21,24,27,30 in je console<br>
+    uitgeprint wordt<br><b>vanaf ln 111</b><br>
+
+    <div id="answer[algemeen]"></div>
+    <script>
+        const answerField = document.querySelectorAll('.answers');
+        const sports
+            = ["voetbal", "basketbal", "volleybal", "hockey", "honkbal",
+                "zwemmen", "kortbal"]
+
+        for (let i = 0; i < sports.length; i++) {
+            console.log(sports[i]);
+            answerField[0].innerHTML = `<b> Log in console: ${sports} .</b>`;
+        }
+        // opdracht 2
+        let myArray = [];
+        for (let i = 0; i <= 20; i++) {
+            if (i % 2 == 0) {
+                // console.log(i);
+                myArray.push(i);
+                console.log(myArray);
+                answerField[1].innerHTML = `<b>Console.log output: ${myArray} .</b>`;
+            }
+        }
+        // opdracht 3
+        let sportsArray = [];
+        for (let i = 0; i < sports.length; i += 2) {
+            console.log(sports[i]);
+            sportsArray.push(sports[i])
+            answerField[2].innerHTML = `<b> Log in console: ${sportsArray} vanaf ln66.</b>`;
+        }
+        // opdracht 4
+        let j = 0;
+        while (j < sports.length) {
+            console.log(sports[j]);
+            j++;
+            answerField[3].innerHTML = `<b>Console.log output met while loop: ${sports} vanaf ln73.</b>`;
+        }
+
+        // opdracht 5
+        for (const key in sports) {
+            if (Object.hasOwnProperty.call(sports, key)) {
+                console.log(sports[key]);
+                answerField[4].innerHTML = `<b>Console.log output met for ... in loop: ${sports} vanaf ln81.</b>`;
+            }
+        }
+
+        // opdracht 6
+        for (const sport of sports) {
+            console.log(sport);
+            answerField[5].innerHTML = `<b>Console.log output met for ... of loop: ${sports} vanaf ln88.</b>`;
+        }
+        // opdracht 7
+        let k = 0;
+        while (k < 3) {
+            // console.log(k);
+            if (k == 0) {
+                for (let i = 1; i <= 10; i++) {
+                    if (i == i) {
+                        console.log(i);
+                    }
+
+                }
+            } else if (k == 1) {
+                for (let i = 1; i <= 20; i++) {
+                    if (i % 2 == 0) {
+                        console.log(i);
+                    }
+                }
+            } else {
+                for (let i = 1; i <= 30; i++) {
+                    if (i % 3 == 0) {
+                        console.log(i);
+                    }                   
+                }
+            }
+            k++;
+        }
+    </script>
+</body>
+
+</html>

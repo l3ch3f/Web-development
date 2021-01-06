@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+
+<body>
+    <p>Een fibenocci is een reeks waarbij getallen bij een sum is van zijn voorgaande nummer.</p>
+    <script>
+        let i;
+        let fib = []; 
+
+        fib[0] = 0;
+        fib[1] = 1;
+        for (i = 2; i <= 50; i++) {
+            
+            fib[i] = fib[i - 2] + fib[i - 1];
+            console.log(fib[i]);
+        }
+    </script>
+</body>
+
+</html>
