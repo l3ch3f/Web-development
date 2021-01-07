@@ -22,7 +22,7 @@ const playerInput = (obj) => {
         winner = getWinner(computerChoice);
     }
 
-    let message = `You picked ${playerChoice}, comuter picked ${computerChoice}, therefore you `;
+    let message = `You picked ${playerChoice}, computer picked ${computerChoice}, therefore you `;
     if (winner === RESULT_DRAW) {
         message = message + "had a draw.";
     } else if (winner === RESULT_PLAYER_WINS) {
