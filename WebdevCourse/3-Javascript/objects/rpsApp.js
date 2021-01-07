@@ -35,8 +35,6 @@ const playerInput = (obj) => {
     gameIsRunning = false;
 };
 
-
-
 // radomize computer input
 const computerInput = () => {
     const randomValue = Math.random();
