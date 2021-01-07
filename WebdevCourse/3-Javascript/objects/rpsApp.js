@@ -8,17 +8,49 @@ const RESULT_PLAYER_WINS = "PLAYER_WINS";
 const RESULT_COMPUTER_WINS = "COMPUTER_WINS";
 let gameIsRunning = false;
 
-startGameBtn.addEventListener('click', () => {
-    if (gameIsRunning) {
-        return;
+
+
+// get playerinput
+const playerInput = (obj) => {
+    const selection = obj.id.toUpperCase();
+    const playerChoice = selection;
+    const computerChoice = computerInput();
+    let winner;
+    if (playerChoice) {
+        winner = getWinner(computerChoice, playerChoice);
+    } else {
+        winner = getWinner(computerChoice);
     }
-    gameIsRunning = true;
-    console.log('Game is Starting...');
-    gameDisplay();
-});
-   
+
+    let message = `You picked ${playerChoice}, comuter picked ${computerChoice}, therefore you `;
+    if (winner === RESULT_DRAW) {
+        message = message + "had a draw.";
+    } else if (winner === RESULT_PLAYER_WINS) {
+        message = message + "Won!!!";
+    } else {
+        message = message + "LOST!!!!!!!! try again?!";
+    }
+
+    alert(message);
+    gameIsRunning = false;
+};
 
 
+
+// radomize computer input
+const computerInput = () => {
+    const randomValue = Math.random();
+    if (randomValue < 0.34) {
+        return ROCK;
+    } else if (randomValue < 0.67 ) {
+        return PAPER;
+    } else {
+        return SCISSORS;
+    }
+};
+
+
+// start spel display
 const gameDisplay = () => {
     const rockUri =
         '"https://3dwarehouse.sketchup.com/warehouse/v1.0/publiccontent/fb61414e-e006-4270-a68a-7a083663b905"';
@@ -29,15 +61,34 @@ const gameDisplay = () => {
     displayGame.innerHTML = `
         <h1 >Choose Rock, Paper or Scissors</h1>
         <div class="container d-flex justify-content-center">
-        <img class="img" onclick="playerInput(this)" src=${rockUri}>
-        <img class="img" onclick="playerInput(this)" src=${paperUri}>
-        <img class="img" onclick="playerInput(this)" src=${scissorUri}>
+        <img class="img" onclick="playerInput(this)" src=${rockUri} id="rock">
+        <img class="img" onclick="playerInput(this)" src=${paperUri} id="paper">
+        <img class="img" onclick="playerInput(this)" src=${scissorUri} id= "scissors">
         <div>
     `;
-    const images = document.querySelectorAll("img");
-    console.log(images);     
+    
+};
+// uitslag bepalen:
+const getWinner = (cChoice, pChoice) => {
+   if (cChoice === pChoice) {
+       return RESULT_DRAW;
+   } else if (
+       (cChoice === ROCK && pChoice === PAPER) ||
+       (cChoice === PAPER && pChoice === SCISSORS) ||
+       (cChoice === SCISSORS && pChoice === ROCK)
+   ) {
+       return RESULT_PLAYER_WINS;
+   } else {
+       return RESULT_COMPUTER_WINS;
+   }
 };
 
-const playerInput = () => {
-    alert('clicked');
-};
+startGameBtn.addEventListener("click", () => {
+    if (gameIsRunning) {
+        return;
+    }
+    gameIsRunning = true;
+    console.log("Game is Starting...");
+    gameDisplay();  
+    
+});
