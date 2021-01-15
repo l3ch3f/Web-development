@@ -57,13 +57,9 @@
     } <br>
     </b>
     <p id="answer"></p>
-    <button onclick="answer()">click</button>
+    <button onclick="randomNum()">click</button>
     <script>
-        function answer() {
-            // Aanroepen van de functies
-            
-            randomName(randomNum());
-        }
+        
         const logHello = () => {
             console.log('Hello World')
         };
@@ -88,11 +84,13 @@
         };
         const randomNum = () => {
             num = parseInt(Math.round((Math.random()) * 8));
-            return num;
+            console.log(num);
+           
         };
-        const randomName = (num) => {
+        
+        const randomName = (number) => {
             let name ="";
-            switch (num) {
+            switch (number) {
                 case 1:
                     name = "John";
                     break;
@@ -120,6 +118,28 @@
             }
             console.log(name);
         };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 
 </body>
