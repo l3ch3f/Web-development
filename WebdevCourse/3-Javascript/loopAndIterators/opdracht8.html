@@ -11,14 +11,16 @@
     <p>Een fibenocci is een reeks waarbij getallen bij een sum is van zijn voorgaande nummer.</p>
     <script>
         let i;
-        let fib = []; 
+        let fibenocci = []; 
 
-        fib[0] = 0;
-        fib[1] = 1;
-        for (i = 2; i <= 50; i++) {
+        fibenocci[0] = 0;
+        fibenocci[1] = 1;
+        console.log("hard code: " + fibenocci[0]);
+        console.log("hard code: " + fibenocci[1]);
+        for (i = 2; i <= 51; i++) {
             
-            fib[i] = fib[i - 2] + fib[i - 1];
-            console.log(fib[i]);
+            fibenocci[i] = fibenocci[i - 2] + fibenocci[i - 1];
+            console.log("loop "+ (i-1) + " uitslag: " + fibenocci[i]);
         }
     </script>
 </body>
