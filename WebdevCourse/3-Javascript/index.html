@@ -13,18 +13,36 @@
     <div>
         <span id="label"></span>
     </div>
+
+    <h1>Rock paper Scissors</h1>
+    <div id="container"></div>
     <script>
-        function checkNumber() {
-                const numberInput = document.getElementById('number').value;
-                const label = document.getElementById('label');
+        // function checkNumber() {
+        //         const numberInput = document.getElementById('number').value;
+        //         const label = document.getElementById('label');
                 
-                if (numberInput == 3) {                    
-                    label.innerText = "<h1>HALLLOOOO</h1>";               
-                }
+        //         if (numberInput == 3) {                    
+        //             label.innerText = "<h1>HALLLOOOO</h1>";               
+        //         }
 
                
-            };
+        //     };
+            class Game {
+                constructor(container, icons) {
+                    this.icons = icons;
 
+                    this.title = document.createElement('h3');
+                    this.title.innerText = "MAke your choice";
+                    container.appendChild(this.title);
+
+                    icons.array.forEach(icon) => {
+                        
+                    });
+                    console.log('game');
+                }
+            }
+
+            new Game(document.querySelector('#container'),['rock', 'paper', 'scissors']);
     </script>
 </body>
 
