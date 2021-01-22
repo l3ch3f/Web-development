@@ -16,6 +16,13 @@ const input = (obj) => {
     currentNum = currentValue.join("");
     display.innerHTML = currentNum;
 };
+const removeOperator = () => {
+    btnDelen.classList.remove('operation');
+    btnModulo.classList.remove('operation');
+    btnMin.classList.remove('operation');
+    btnVermenigvuldig.classList.remove('operation');
+    btnPlus.classList.remove('operation');
+}
 
 // To check if other operator is pushed
 const checkOperator = () => {
@@ -26,6 +33,7 @@ const checkOperator = () => {
         currentValue.includes("vermenigvuldig") ||
         currentValue.includes("plus")
     ) {
+        removeOperator();
         resetOperation();
     }
 }
@@ -35,6 +43,7 @@ const modulo = () => {
     oldNum = parseFloat(display.innerHTML);
     isModulo = true;
     currentValue.push("modulo");
+    btnModulo.classList.toggle('operation');
     return oldNum;
 };
 
@@ -43,6 +52,7 @@ const delen = () => {
     oldNum = parseFloat(display.innerHTML);
     isDelen = "true";
     currentValue.push("delen");
+    btnDelen.classList.toggle('operation')
     return oldNum;
 };
 const vermenigvuldig = () => {
@@ -50,6 +60,7 @@ const vermenigvuldig = () => {
     oldNum = parseFloat(display.innerHTML);
     isVermenigvuldig = "true";
     currentValue.push("vermenigvuldig");
+    btnVermenigvuldig.classList.toggle('operation')
     return oldNum;
 };
 const min = () => {
@@ -57,6 +68,7 @@ const min = () => {
     oldNum = parseFloat(display.innerHTML);
     isMin = "true";
     currentValue.push("min");
+    btnMin.classList.toggle('operation')
     return oldNum;
 };
 const plus = () => {
@@ -64,21 +76,22 @@ const plus = () => {
     oldNum = parseFloat(display.innerHTML);
     isPlus = "true";
     currentValue.push("plus");
+    btnPlus.classList.toggle('operation')
     return oldNum;
 };
 
 const bereken = () => {
     currentNum = parseFloat(display.innerHTML);
     if (isModulo) {
-        display.innerHTML = oldNum % currentNum;
+        display.innerHTML = parseFloat(oldNum % currentNum).toFixed(2);
     } else if (isDelen) {
-        display.innerHTML = oldNum / currentNum;
+        display.innerHTML = parseFloat(oldNum / currentNum).toFixed(2);
     } else if (isVermenigvuldig) {
-        display.innerHTML = oldNum * currentNum;
+        display.innerHTML = parseFloat(oldNum * currentNum).toFixed(2);
     } else if (isPlus) {
-        display.innerHTML = oldNum + currentNum;
+        display.innerHTML = parseFloat(oldNum + currentNum).toFixed(2);
     } else if (isMin) {
-        display.innerHTML = oldNum - currentNum;
+        display.innerHTML = parseFloat(oldNum - currentNum).toFixed(2);
     }
     currentValue = [];
 };

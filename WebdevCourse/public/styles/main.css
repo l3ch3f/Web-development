@@ -30,7 +30,7 @@
 }
 
 .calculator__knoppen .knoppen .box {
-  background-color: red;
+  background-color: gray;
   height: 65px;
   width: 65px;
   border-radius: 50%;
@@ -50,7 +50,7 @@
 }
 
 .calculator__knoppen .knoppen .boven {
-  background-color: gray;
+  background-color: lightgray;
 }
 
 .calculator__knoppen .knoppen .nul {
@@ -63,4 +63,9 @@
 .calculator__knoppen .knoppen .resultaat {
   position: relative;
   left: 10px;
+}
+
+.calculator__knoppen .knoppen .operation {
+  background-color: white;
+  color: orange;
 }

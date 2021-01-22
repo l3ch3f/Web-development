@@ -29,7 +29,7 @@
             // background-color: green;
             
             .box {
-                background-color: red;
+                background-color: gray;
                 height: 65px;
                 width: 65px;
                 border-radius: 50%;
@@ -46,7 +46,7 @@
                 background-color: rgb(240, 186, 11);
             }
             .boven {
-                background-color: gray;
+                background-color: lightgray;
             }
             .nul {
                 height: 60px;
@@ -57,6 +57,10 @@
             .resultaat {
                 position: relative;
                 left: 10px;
+            }
+            .operation {
+                background-color: white;
+                color: orange;
             }
         }
     }

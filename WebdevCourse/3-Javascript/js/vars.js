@@ -38,8 +38,6 @@ const posneg = () => {
     }
 };
 
-
-
 // functies op roepen.
 btnReset.addEventListener("click", reset);
 btnPosNeg.addEventListener("click", posneg);
