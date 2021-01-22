@@ -1,0 +1,66 @@
+.calculator {
+  border: solid 2px black;
+  width: 400px;
+  height: 410px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-color: #464646;
+}
+
+.calculator__result {
+  margin-top: 20px;
+  height: 80px;
+  text-align: end;
+  font-size: 50px;
+  color: white;
+}
+
+.calculator__knoppen {
+  background-color: black;
+  height: inherit;
+  width: inherit;
+  margin-top: 20px;
+  position: relative;
+  left: -2px;
+}
+
+.calculator__knoppen .knoppen {
+  height: 80px;
+  width: inherit;
+}
+
+.calculator__knoppen .knoppen .box {
+  background-color: red;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  text-align: center;
+  align-self: center;
+}
+
+.calculator__knoppen .knoppen .box__knop {
+  position: relative;
+  top: 20px;
+  font-weight: 600;
+}
+
+.calculator__knoppen .knoppen .zijkant {
+  color: white;
+  background-color: #f0ba0b;
+}
+
+.calculator__knoppen .knoppen .boven {
+  background-color: gray;
+}
+
+.calculator__knoppen .knoppen .nul {
+  height: 60px;
+  margin-left: 20px;
+  margin-right: 10px;
+  border-radius: 200px;
+}
+
+.calculator__knoppen .knoppen .resultaat {
+  position: relative;
+  left: 10px;
+}

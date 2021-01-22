@@ -1,0 +1,63 @@
+
+
+.calculator {
+    border: solid 2px black;
+    width: 400px;
+    height: 410px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: rgb(70, 70, 70);
+    &__result{
+        margin-top: 20px;
+        // background-color: blue;
+        height: 80px;
+        text-align: end;
+        font-size: 50px;
+        color: white;
+    }
+    &__knoppen {
+        background-color: black;
+        height: inherit;
+        width: inherit;
+        margin-top: 20px;
+        position: relative;
+        left: -2px;     
+        
+        .knoppen {
+            height: 80px;
+            width: inherit;
+            // background-color: green;
+            
+            .box {
+                background-color: red;
+                height: 65px;
+                width: 65px;
+                border-radius: 50%;
+                text-align: center;
+                align-self: center; 
+                &__knop {
+                    position: relative;
+                    top: 20px;
+                    font-weight: 600;
+                }
+            }
+            .zijkant {
+                color: white;
+                background-color: rgb(240, 186, 11);
+            }
+            .boven {
+                background-color: gray;
+            }
+            .nul {
+                height: 60px;
+                margin-left: 20px;
+                margin-right: 10px;
+                border-radius: 200px;
+            }
+            .resultaat {
+                position: relative;
+                left: 10px;
+            }
+        }
+    }
+}
