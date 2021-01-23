@@ -24,30 +24,34 @@
         console.log(Club5);
         const ClubGegevens = function (adres, telefoon, contact) {
             this.adres = adres,
-            this.telefoon = telefoon,
-            this.contact = contact
+                this.telefoon = telefoon,
+                this.contact = contact
         }
 
-        const Club = function (name, type, leden) {
+        const Club = function (name, type, leden, adres, telefoon, contact) {
             this.name = name,
             this.type = type,
             this.leden = leden,
-            new ClubGegevens(this)
+            this.gegevens = new ClubGegevens(adres,telefoon,contact)
         }
+
+        const Club6 = new Club("test1", "polo", 32, "den haag", 321321, "hallo");
+        console.log(Club6);
+
         const Club1 = new Club("asta", "voetbal", 22);
         const Club2 = new Club("fcknudde", "basketbal", 1);
         const Club3 = new Club("test", "testing", 12);
         const Club4 = new Club("motoGp", "motor", 2, "hahahs");
-        
+
         let mijnLijst = [Club1, Club2, Club3, Club4]
 
         for (let i = 0; i < mijnLijst.length; i++) {
             console.log(mijnLijst[i].name);
 
         }
-        
-        
-        
+
+
+
 
     </script>
 </body>
