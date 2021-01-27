@@ -15,23 +15,35 @@ const App = props => {
     const [otherState, setOtherState] = useState('some other value');
     console.log(personsState, otherState);
 
-    const switchNameHandler = () => {
+    const switchNameHandler = (newName) => {
         // console.log('was clicked!');
         // DONT DO THIS: personsState.persons[0].name = 'maximillian';
         setPersonsState({
             persons: [
-                { name: "Maximalling", age: 28 },
+                { name: newName, age: 28 },
                 { name: "Manu", age: 29 },
-                { name: "Stephanie", age: 22 },
+                { name: "Stephanie", age: 22 }
             ]
-        });
+        })
     };
+
+    const nameChangedHandler = (event) => {
+      setPersonsState({
+          persons: [
+              { name: "Max", age: 28 },
+              { name: event.target.value, age: 29 },
+              { name: "Stephanie", age: 26 },
+          ]
+      });
+    }
 
         return (
             <div className="App">
                 <h1>Hi I'm a React app</h1>
                 <p>This is really working!</p>
-                <button onClick={switchNameHandler}>Switch Name</button>
+                <button onClick={() => switchNameHandler('Maximillian')}>
+                    Switch Name
+                </button>
                 <Person
                     name={personsState.persons[0].name}
                     age={personsState.persons[0].age}
@@ -39,8 +51,10 @@ const App = props => {
                 <Person
                     name={personsState.persons[1].name}
                     age={personsState.persons[1].age}
+                    // better use the bind syntax because the other passing method is inefficient.
+                    click={switchNameHandler.bind(this, "Alice")}
+                    changed={nameChangedHandler}
                 >
-                    
                     My hobbys: Voetbal
                 </Person>
                 <Person
