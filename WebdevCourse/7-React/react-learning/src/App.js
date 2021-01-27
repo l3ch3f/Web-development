@@ -5,9 +5,9 @@ import Person from "./Person/Person";
 class App extends Component {
     state = {
         persons: [
-            { name: "Max", age: 28 },
-            { name: "Manu", age: 29 },
-            { name: "Stephanie", age: 26 },
+            { id: "1", name: "Max", age: 28 },
+            { id: "2", name: "Manu", age: 29 },
+            { id: "3", name: "Stephanie", age: 26 },
         ],
         otherState: "some other value",
         showPersons: false,
@@ -36,10 +36,10 @@ class App extends Component {
     };
 
     deletePersonHandler = (personIndex) => {
-      // const persons = this.state.persons.slice();
-      const persons = [...this.state.persons];
-      persons.splice(personIndex, 1);
-      this.setState({persons: persons});
+        // const persons = this.state.persons.slice();
+        const persons = [...this.state.persons];
+        persons.splice(personIndex, 1);
+        this.setState({ persons: persons });
     };
 
     togglePersonsHandler = () => {
@@ -66,7 +66,14 @@ class App extends Component {
                   */}
                     {/**/}
                     {this.state.persons.map((person, index) => {
-                        return <Person click={() => this.deletePersonHandler(index)}  name={person.name} age={person.age} />;
+                        return (
+                            <Person
+                                click={() => this.deletePersonHandler(index)}
+                                name={person.name}
+                                age={person.age}
+                                key={person.id}
+                            />
+                        );
                     })}
                     {/*/}
                     <Person
