@@ -4,5 +4,7 @@
 			"path": "WebdevCourse"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
 }
