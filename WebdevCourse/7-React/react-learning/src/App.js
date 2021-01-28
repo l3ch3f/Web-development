@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./App.css";
+import classes from "./App.css";
+import Person from "./Person/Person";
 // import styled from "styled-components";
 // import Radium, { StyleRoot } from "radium";
-import Person from "./Person/Person";
 
 /* styled-components package */
 // const StyledButton = styled.button`
@@ -132,25 +132,30 @@ class App extends Component {
             // };
         }
 
-        const classes = [];
+        const assignedClasses = [];
         if (this.state.persons.length <= 2) {
-            classes.push("red"); // classes = ['red']
+            assignedClasses.push(classes.red); // classes = ['red']
         }
         if (this.state.persons.length <= 1) {
-            classes.push("bold"); // classes = ['red', 'bold']
+            assignedClasses.push(classes.bold); // classes = ['red', 'bold']
         }
         return (
             // <StyleRoot>
-                <div className="App">
-                    <h1>Hi, I'm a React App</h1>
-                    <p className={classes.join(" ")}>This is really working!</p>
-                    {/* <StyledButton alt={this.state.showPersons} onClick={this.togglePersonsHandler}> */}
-                    <button className="button" onClick={this.togglePersonsHandler}>
-                        Toggle Persons
+            <div className={classes.App}>
+                <h1>Hi, I'm a React App</h1>
+                <p className={assignedClasses.join(" ")}>
+                    This is really working!
+                </p>
+                {/* <StyledButton alt={this.state.showPersons} onClick={this.togglePersonsHandler}> */}
+                <button
+                    className={classes.Button}
+                    onClick={this.togglePersonsHandler}
+                >
+                    Toggle Persons
                     {/* </StyledButton> */}
-                    </button>
-                    {persons}
-                </div>
+                </button>
+                {persons}
+            </div>
             // </StyleRoot>
         );
         // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
