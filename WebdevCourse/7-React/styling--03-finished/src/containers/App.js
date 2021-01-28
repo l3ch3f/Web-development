@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Persons from '../components/Persons/Persons';
 import classes from './App.css';
 import Person from '../components/Persons/Person/Person';
 
@@ -52,17 +52,9 @@ class App extends Component {
     if (this.state.showPersons) {
       persons = (
         <div>
-          {this.state.persons.map((person, index) => {
-            return (
-              <Person
-                click={() => this.deletePersonHandler(index)}
-                name={person.name}
-                age={person.age}
-                key={person.id}
-                changed={event => this.nameChangedHandler(event, person.id)}
-              />
-            );
-          })}
+          <Persons persons={this.state.persons}
+                    clicked={this.deletePersonHandler}
+                    changed={this.nameChangedHandler} />
         </div>
       );
 
