@@ -22,13 +22,7 @@ const input = (obj) => {
     currentNum = currentValue.join("");
     display.innerHTML = currentNum;
 };
-const removeOperator = () => {
-    btnDelen.classList.remove('operation');
-    btnModulo.classList.remove('operation');
-    btnMin.classList.remove('operation');
-    btnVermenigvuldig.classList.remove('operation');
-    btnPlus.classList.remove('operation');
-}
+
 
 // To check if other operator is pushed
 const checkOperator = () => {

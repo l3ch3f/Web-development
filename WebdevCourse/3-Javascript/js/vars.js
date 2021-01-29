@@ -12,15 +12,24 @@ let oldNum = "";
 let currentNum = "";
 let currentValue = [];
 
+const removeOperator = () => {
+    btnDelen.classList.remove("operation");
+    btnModulo.classList.remove("operation");
+    btnMin.classList.remove("operation");
+    btnVermenigvuldig.classList.remove("operation");
+    btnPlus.classList.remove("operation");
+};
+
 const resetOperation = () => {
     isModulo = false;
     isDelen = false;
     isVermenigvuldig = false;
     isPlus = false;
     isMin = false;
+    removeOperator();
 };
 
-resetOperation();
+
 // Reset knop
 const reset = () => {
     display.innerHTML = 0;
@@ -28,6 +37,7 @@ const reset = () => {
     resetOperation();
 };
 
+reset()
 // positief negatief
 const posneg = () => {
     oldNum = display.innerHTML;
