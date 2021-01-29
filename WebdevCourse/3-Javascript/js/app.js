@@ -95,16 +95,12 @@ const bereken = () => {
     currentNum = parseFloat(display.innerHTML);
     if (isModulo) {
         resultaat = oldNum % currentNum
-        // checkBereken(resultaat);
     } else if (isDelen) {
         resultaat = oldNum / currentNum
-        // checkBereken(resultaat);
     } else if (isVermenigvuldig) {
         resultaat = oldNum * currentNum;
-        // checkBereken(resultaat);
     } else if (isPlus) {
         resultaat = oldNum + currentNum;
-        // checkBereken(resultaat);
     } else if (isMin) {
         resultaat = oldNum - currentNum;
     }
