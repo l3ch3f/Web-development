@@ -1,5 +1,6 @@
 const input = (obj) => {
     const inputs = obj.querySelector("span").innerHTML;
+    btnIsFloat.style.pointerEvents = 'auto';
     // voor de reset 
     
     if (display.innerHTML == 0) {
@@ -13,6 +14,9 @@ const input = (obj) => {
         ) {
             currentValue = [];
         }
+    if(currentValue.includes(".")) {
+        btnIsFloat.style.pointerEvents = 'none';
+    }
     btnReset.querySelector("span").innerHTML = "C"
     currentValue.push(inputs);
     currentNum = currentValue.join("");
@@ -82,19 +86,35 @@ const plus = () => {
     return oldNum;
 };
 
+// Voor om float of integer controle
+const checkBereken = (resultaat) => {
+    isFloat = Number.isInteger(resultaat);
+    if (isFloat) {
+        display.innerHTML = resultaat;
+    } else {
+        display.innerHTML = resultaat.toFixed(2);
+    }
+}
+
+
 const bereken = () => {
     currentNum = parseFloat(display.innerHTML);
     if (isModulo) {
-        display.innerHTML =(oldNum % currentNum);
+        resultaat = oldNum % currentNum
+        // checkBereken(resultaat);
     } else if (isDelen) {
-        display.innerHTML = (oldNum / currentNum).toFixed(2);
+        resultaat = oldNum / currentNum
+        // checkBereken(resultaat);
     } else if (isVermenigvuldig) {
-        display.innerHTML = (oldNum * currentNum);
+        resultaat = oldNum * currentNum;
+        // checkBereken(resultaat);
     } else if (isPlus) {
-        display.innerHTML = (oldNum + currentNum);
+        resultaat = oldNum + currentNum;
+        // checkBereken(resultaat);
     } else if (isMin) {
-        display.innerHTML = (oldNum - currentNum);
+        resultaat = oldNum - currentNum;
     }
+    checkBereken(resultaat);
     currentValue = [];
     
 };

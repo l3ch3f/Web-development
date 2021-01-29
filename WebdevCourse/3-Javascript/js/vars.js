@@ -6,6 +6,7 @@ const btnVermenigvuldig = document.getElementById("bereken[vermenigvuldig]");
 const btnMin = document.getElementById("bereken[min]");
 const btnPlus = document.getElementById("bereken[plus]");
 const btnBereken = document.getElementById("bereken[bereken]");
+const btnIsFloat = document.getElementById("cijfer[.]");
 const display = document.getElementById("display");
 let oldNum = "";
 let currentNum = "";
@@ -38,6 +39,8 @@ const posneg = () => {
         display.innerHTML = newNum;
     }
 };
+
+
 
 // functies op roepen.
 btnReset.addEventListener("click", reset);
