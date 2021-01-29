@@ -23,6 +23,7 @@ resetOperation();
 // Reset knop
 const reset = () => {
     display.innerHTML = 0;
+    btnReset.querySelector("span").innerHTML="AC";
     resetOperation();
 };
 

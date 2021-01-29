@@ -1,17 +1,19 @@
 const input = (obj) => {
     const inputs = obj.querySelector("span").innerHTML;
     // voor de reset 
+    
     if (display.innerHTML == 0) {
         currentValue = [];
     } else if (
-                currentValue.includes("modulo") ||
-                currentValue.includes("plus") ||
-                currentValue.includes("min") ||
-                currentValue.includes("vermenigvuldig") ||
-                currentValue.includes("delen") 
-         ) {
-        currentValue = [];
-    }
+        currentValue.includes("modulo") ||
+        currentValue.includes("plus") ||
+        currentValue.includes("min") ||
+        currentValue.includes("vermenigvuldig") ||
+        currentValue.includes("delen") 
+        ) {
+            currentValue = [];
+        }
+    btnReset.querySelector("span").innerHTML = "C"
     currentValue.push(inputs);
     currentNum = currentValue.join("");
     display.innerHTML = currentNum;
@@ -83,17 +85,18 @@ const plus = () => {
 const bereken = () => {
     currentNum = parseFloat(display.innerHTML);
     if (isModulo) {
-        display.innerHTML = parseFloat(oldNum % currentNum).toFixed(2);
+        display.innerHTML =(oldNum % currentNum);
     } else if (isDelen) {
-        display.innerHTML = parseFloat(oldNum / currentNum).toFixed(2);
+        display.innerHTML = (oldNum / currentNum).toFixed(2);
     } else if (isVermenigvuldig) {
-        display.innerHTML = parseFloat(oldNum * currentNum).toFixed(2);
+        display.innerHTML = (oldNum * currentNum);
     } else if (isPlus) {
-        display.innerHTML = parseFloat(oldNum + currentNum).toFixed(2);
+        display.innerHTML = (oldNum + currentNum);
     } else if (isMin) {
-        display.innerHTML = parseFloat(oldNum - currentNum).toFixed(2);
+        display.innerHTML = (oldNum - currentNum);
     }
     currentValue = [];
+    
 };
 btnModulo.addEventListener("click", modulo);
 btnDelen.addEventListener("click", delen);
