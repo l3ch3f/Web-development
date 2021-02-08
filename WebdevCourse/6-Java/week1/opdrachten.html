@@ -5,9 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>
+    <h2>
         Opdracht 1 - Basic Syntax
-    </h1>
+    </h2>
   <p>
       Voordat je Java kan gebruiken moet je de syntax kunnen begrijpen. Doe onderzoek naar de volgende termen en leg uit wat ze (voor Java) betekenen:
   </p>
@@ -32,6 +32,47 @@
         </li>
     </ul>
 
+<h2>
+    Opdracht 2 - Variables
+</h2>
+<p>
+    a) Waar wordt een local variable gedeclareerd? <br>
+    Ze worden declared in methods, constructors of blocks.
+</p>
+<p>
+    b)Wat voor soort informatie sla je op in een instance variable? <br>
+    Instance variables sla je op in een class, buiten methods, constructors of block. En het bevat waardes die moeten refereren door meer dan 1 method, constructor of block.
+</p>
+<p>
+    c) Wat voor soort informatie sla je op in een class variable? <br>
+    Class variables ook wel static variables worden met de static keyword declared in een class, maar wel uit een method, constructor of block. Het komt maar 1 keer voor in een class, maar het kan wel vaker terug komen in een object wanneer het gecreeerd word.
+</p>
+<p>
+    d) Wat is het voordeel van het gebruiken van een class variable? <br>
+    Het kan vaker opgeroepen worden bij het creeeren van nieuwe objecten.
+</p>
+
+<h2>
+    Opdracht 3 - Acces Control Modifiers
+</h2>
+<ul>
+    <li>
+        Default: bezit geen keyqord, we declareren niet expliciet een acces modifier voor een class, field of method. Het is toegankelijk voor elke andere class in dezelfde package.
+    </li>
+    <li>
+        Private: Word alleen toegankelijk binnen de class zelf.
+    </li>
+    <li>
+        Public: Is toegankelijk vanuit elk andere class ongeacht de package.
+    </li>
+    <li>
+        Protected: Is alleen toegankelijk voor de subclasses in andere package of elke class in de package van de protected member class. Het kan niet op een class of interface gebruikt worden, wel op methods en fields.
+    </li>
+</ul>
+
+<h2>
+    Opdracht 4 - Non Acces Modifiers
+</h2>
 
 
 
