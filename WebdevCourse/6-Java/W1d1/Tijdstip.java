@@ -11,6 +11,8 @@ public class Tijdstip {
         this.seconde = seconde;
     }
 
+    Tijdstip tijdstip = new Tijdstip(12, 40, 45);
+
     // Getters
     public int getUur() {
         return uur;
