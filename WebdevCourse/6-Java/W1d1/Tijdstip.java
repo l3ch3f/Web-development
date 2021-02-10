@@ -1,8 +1,11 @@
-public class Tijdstip {
+static final class Tijdstip {
+
+    
     // Attributen
-    private int uur;
+    static final private int uur;
     private int minuut;
     private int seconde;
+    static final int miliseconds;
 
     // Constructor
     public Tijdstip(int uur, int minuut, int seconde) {
@@ -14,7 +17,7 @@ public class Tijdstip {
     Tijdstip tijdstip = new Tijdstip(12, 40, 45);
 
     // Getters
-    public int getUur() {
+    static final int getUur() {
         return uur;
     }
 
