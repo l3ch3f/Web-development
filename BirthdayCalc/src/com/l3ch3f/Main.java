@@ -11,7 +11,7 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("What is your first name?");
-        String firstName = scan.nextLine();
+        String firstName = scan.nextLine(); // Bug als je next() gebruikt dan slaat hij lastname over
         System.out.println("------------");
         System.out.println("What is your last name?");
         String lastName = scan.nextLine();
