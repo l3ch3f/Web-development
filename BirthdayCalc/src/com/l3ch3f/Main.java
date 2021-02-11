@@ -16,14 +16,14 @@ public class Main {
         System.out.println("What is your last name?");
         String lastName = scan.nextLine();
         System.out.println("------------");
-        System.out.println("Wich year were you born?");
+        System.out.println("Which year were you born?");
         Integer year = scan.nextInt();
         System.out.println("------------");
-        System.out.println("Wich month were you born?");
+        System.out.println("Which month were you born?");
         System.out.println("Expected input: the number of the month: Es. 3=march");
         Integer month = scan.nextInt();
         System.out.println("------------");
-        System.out.println("On wich day were you born?");
+        System.out.println("On which day were you born?");
         Integer day = scan.nextInt();
 
 
@@ -34,6 +34,7 @@ public class Main {
 
         Period p = Period.between(birthday,today); // eerste parameter ten opzichte van tweede parameter
 
-        System.out.println("Hello and gooday "+ firstName + " " + lastName + " you are " + p.getYears() + " old");
+        System.out.println("Hello and good day "+ firstName + " " + lastName + " you are " + p.getYears() + " old");
     }
 }
+dd/mm/yyyy
