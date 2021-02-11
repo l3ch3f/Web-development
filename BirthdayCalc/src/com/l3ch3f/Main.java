@@ -31,7 +31,7 @@ public class Main {
 
         LocalDate today = LocalDate.now(); // Todays date
         LocalDate birthday = LocalDate.of(year,month , day); // Birthday input
-//
+
         Period p = Period.between(birthday,today); // eerste parameter ten opzichte van tweede parameter
 
         System.out.println("Hello and gooday "+ firstName + " " + lastName + " you are " + p.getYears() + " old");
