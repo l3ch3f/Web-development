@@ -10,7 +10,6 @@
     <!-- Define your beans here -->
     <bean id="myCoach"
           class="com.l3ch3f.TrackCoach">
-
     </bean>
 </beans>
 

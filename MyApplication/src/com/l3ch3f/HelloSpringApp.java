@@ -2,7 +2,7 @@ package com.l3ch3f;
 
 
 public class HelloSpringApp {
-    public static <ClassPathXmlApplicationContext> void main(String[] args) {
+    public static void main(String[] args) {
         // Load the spring config file
         ClassPathXmlApplicationContext context;
         context = new ClassPathXmlApplicationContext("applicationContext.xml");
