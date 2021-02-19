@@ -1,0 +1,86 @@
+<!DOCTYPE htmlSYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:th="http://thymeleaf.org">
+
+<head>
+  <meta charset="ISO-8859-1">
+  <title>All Coach - Techgrounds Service</title>
+  <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container text-center">
+    <div>
+      <form th:action="@{/logout}" method="post">
+        <p>
+         
+            </p>
+            <input type="submit" value="Sign Out">
+        </form>
+    </div>
+    <div>
+        <h1>Ingelogd</h1>
+    </div>
+    <div>
+        HOOIII COACH
+    </div>
+    <div>
+        <h1>List of All docs</h1>
+    </div>
+    <div>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>fileId</th>
+                <th>docName</th>
+                <th>doc Type</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="doc: ${listDocs}">
+                <td th:text="${doc.fileId}">fileId</td>
+                <td th:text="${doc.docName}">docName</td>
+                <td th:text="${doc.docType}">docType</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h1>List of All students</h1>
+    </div>
+    <div>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>User ID</th>
+                <th>E-mail</th>
+                <th>First Name</th>
+                <th>List Name</th>
+                <th>Role</th>
+                <th>isActive</th>
+                <th>permissions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user: ${listStudents}">
+                <td th:text="${user.userId}">User ID</td>
+                <td th:text="${user.email}">Email</td>
+                <td th:text="${user.firstName}">First Name</td>
+                <td th:text="${user.lastName}">Last Name</td>
+                <td th:text="${user.roles}">Role</td>
+                <td th:text="${user.active}">isActive?</td>
+                <td th:text="${user.permissions}">permissions</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="container">
+    <h3><a th:href="@{/register}">Register</a></h3>
+</div>
+
+
+
+</body>
+</html>
