@@ -1,5 +1,7 @@
 package com.l3ch3f;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -15,9 +17,10 @@ public class Zoo {
         this.animalList = animalList;
     }
 
-    public void addAnimal(String name, Integer age, Date birthDay) {
+    public Animal addAnimal(String name, Integer age, Date birthDay) {
         Animal addAnimal = new Animal(name, age, birthDay);
         animalList.add(addAnimal);
+        return addAnimal;
     }
 
 
@@ -32,7 +35,10 @@ public class Zoo {
             }
         }
 
-
+    }
+    public void feedAnimal() throws ParseException {
+        animalList.add(addAnimal("Bob",22,  new SimpleDateFormat("dd/MM/yyyy").parse("12/11/1999")));
+        animalList.get(0).feed();
     }
 
 }

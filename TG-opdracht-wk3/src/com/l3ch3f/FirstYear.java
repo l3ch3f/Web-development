@@ -39,8 +39,17 @@ public class FirstYear extends Student {
         this.note = note;
     }
 
-    public class FirstYearHonorStudent implements com.l3ch3f.HonorStudent {
+    public class FirstYearHonorStudent implements HonorStudent {
 
+        @Override
+        public void removeFromProgram() {
+
+        }
+
+        @Override
+        public void checkForNotes() {
+
+        }
     }
 
 }

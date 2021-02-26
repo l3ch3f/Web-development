@@ -12,9 +12,7 @@ public abstract class Student {
         this.name = name;
     }
 
-    public void passYear() {
-
-    }
+    public abstract void passYear();
 
 
 
