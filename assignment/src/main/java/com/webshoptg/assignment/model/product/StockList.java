@@ -10,9 +10,6 @@ public class StockList {
     private Long id;
     private Integer stockQuantity;
 
-    @OneToOne (cascade=CascadeType.ALL)
-    private ProductInfo productInfo;
-
 
     // Constructors
 
@@ -33,11 +30,4 @@ public class StockList {
         this.stockQuantity = stockQuantity;
     }
 
-    public ProductInfo getProductInfo() {
-        return productInfo;
-    }
-
-    public void setProductInfo(ProductInfo productInfo) {
-        this.productInfo = productInfo;
-    }
 }
