@@ -13,6 +13,7 @@ public class ProductInfo {
     private String price;
     private String imgUrl;
     private String producer;
+    private String description;
 
     @OneToOne (cascade=CascadeType.ALL)
     private ProductSpecification productSpecification;
@@ -78,5 +79,13 @@ public class ProductInfo {
 
     public void setStockList(StockList stockList) {
         this.stockList = stockList;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

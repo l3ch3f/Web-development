@@ -35,7 +35,10 @@ class ProductRepositoryTest {
         productInfo.setStockList(stock);
         productInfo.setPrice("679");
         productInfo.setImgUrl("https://media.s-bol.com/6B6w0L9ngVE7/124x89.jpg");
+        productInfo.setDescription("Deze Acer laptop is geschikt voor het bekijken van je favoriete films en series. Dankzij het IPS scherm heb je een brede kijkhoek en een realistische kleurweergave, ideaal voor grafisch design. Deze laptop is razendsnel dankzij de snelle processor en SSD.");
         stock.setStockQuantity(12);
+
+
         ProductInfo savedProduct = repo.save(productInfo);
         ProductInfo existProduct = entityManager.find(ProductInfo.class, savedProduct.getId());
         assertThat(productInfo.getProductName()).isEqualTo(existProduct.getProductName());

@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org"
- lang="en">
+      lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Webshop</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/styles/index.css}">
+    <style>
+        .imgProduct {
+            height: 200px;
+            width:300px
+        }
+        .specs {
+            height:100%;
+            width:300px;
+        }
+        .description {
+            position: relative;
+            right: 200px;
+            height: 500px;
+        }
+        .quantityHandler{
+            width:120px
+        }
+
+
+
+
+
+
+
+    </style>
 </head>
 <body>
 <!-- NavBar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -32,19 +58,96 @@
         </div>
     </div>
 </nav>
-<div class='container mt-5 text-center'>
+<div class='container mt-2 text-center'>
     <h1>Welkom op de L3Ch3f's WebShop</h1>
 </div>
-<div class="container">
-<!--    <div th:each="product: ${listProducts}">-->
-<!--        <p th:text="${product.productName}"></p>-->
-<!--    </div>-->
-    <div>
-        <img class="imgProduct" src="https://media.s-bol.com/6B6w0L9ngVE7/124x89.jpg" alt="">
-    </div>
-</div>
+<section>
+    <div class="container">
+        <!--    <div th:each="product: ${listProducts}">-->
+        <!--        <p th:text="${product.productName}"></p>-->
+        <!--    </div>-->
+        <div class="container d-flex">
+            <div class="container">
+                <div class="container d-flex flex-column">
+                    <img class="imgProduct" src="https://media.s-bol.com/6B6w0L9ngVE7/124x89.jpg" alt="">
+                    <h5 class="productName">Text for product</h5>
+                    <h5 class="productPrice">Price</h5>
+                </div>
+                <div class="border border-primary specs">
+                    <table class="table table-warning table-hover">
+                        <thead>
+                        <tr>
+                            <th>Specification</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Producer</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>type</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>productModel</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>internMemory</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>screenSize</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>processorType</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>codeName</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>graphicCard</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="container border border-success description">
+                <div>
+                    <h5>Description:</h5>
+                    <p>Tralala</p>
+                </div>
+                <div>
+                    <div>
+                        <p>
+                        <strong>In Stock:</strong><span>Stocklist</span>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+                        </p>
+                    </div>
+                    <div class="d-flex">
+                        <div class="input-group my-3 quantityHandler">
+                            <button class="btn btn-outline-secondary" type="button">-</button>
+                            <input type="text" class="form-control" placeholder=""
+                                   aria-label="Example text with two button addons">
+                            <button class="btn btn-outline-secondary" type="button">+</button>
+                        </div>
+                        <button>Add to ShoppingCart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
