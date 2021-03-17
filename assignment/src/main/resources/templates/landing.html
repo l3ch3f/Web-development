@@ -24,13 +24,6 @@
         .quantityHandler{
             width:120px
         }
-
-
-
-
-
-
-
     </style>
 </head>
 <body>
@@ -61,84 +54,20 @@
 <div class='container mt-2 text-center'>
     <h1>Welkom op de L3Ch3f's WebShop</h1>
 </div>
+<!--Products -->
 <section>
     <div class="container">
         <!--    <div th:each="product: ${listProducts}">-->
         <!--        <p th:text="${product.productName}"></p>-->
         <!--    </div>-->
-        <div class="container d-flex">
-            <div class="container">
-                <div class="container d-flex flex-column">
-                    <img class="imgProduct" src="https://media.s-bol.com/6B6w0L9ngVE7/124x89.jpg" alt="">
-                    <h5 class="productName">Text for product</h5>
-                    <h5 class="productPrice">Price</h5>
-                </div>
-                <div class="border border-primary specs">
-                    <table class="table table-warning table-hover">
-                        <thead>
-                        <tr>
-                            <th>Specification</th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Producer</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>type</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>productModel</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>internMemory</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>screenSize</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>processorType</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>codeName</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>graphicCard</td>
-                            <td></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="container border border-success description">
-                <div>
-                    <h5>Description:</h5>
-                    <p>Tralala</p>
-                </div>
-                <div>
-                    <div>
-                        <p>
-                        <strong>In Stock:</strong><span>Stocklist</span>
-
-                        </p>
-                    </div>
-                    <div class="d-flex">
-                        <div class="input-group my-3 quantityHandler">
-                            <button class="btn btn-outline-secondary" type="button">-</button>
-                            <input type="text" class="form-control" placeholder=""
-                                   aria-label="Example text with two button addons">
-                            <button class="btn btn-outline-secondary" type="button">+</button>
-                        </div>
-                        <button>Add to ShoppingCart</button>
-                    </div>
+        <div class="container d-flex align-content-between">
+            <div th:each="product: ${listProducts}" class="container mt-2 row justify-content-between">
+                <div class="container d-flex flex-column mx-3 col-4">
+                    <a th:href="'/product/'+${product.id}">
+                    <img class="imgProduct" th:src="${product.imgUrl}" alt="laptop">
+                    </a>
+                    <h5 class="productName" th:text="${product.productName}">Text for product</h5>
+                    <h5 class="productPrice" th:text="&#8364+ ' ' +${product.price}">Price</h5>
                 </div>
             </div>
         </div>
