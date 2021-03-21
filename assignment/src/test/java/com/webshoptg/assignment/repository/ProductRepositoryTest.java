@@ -6,6 +6,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import com.webshoptg.assignment.model.product.ProductInfo;
 import com.webshoptg.assignment.model.product.ProductSpecification;
 import com.webshoptg.assignment.model.product.StockList;
+import com.webshoptg.assignment.model.user.UserLog;
 import com.webshoptg.assignment.service.ProductService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +24,12 @@ class ProductRepositoryTest {
     private TestEntityManager entityManager;
     @Autowired
     private ProductRepository repo;
+    @Autowired
+    private TokenRepository token;
 
     @Test
     public void testCreateProduct1(){
+        UserLog log = new UserLog();
         ProductInfo productInfo = new ProductInfo();
         ProductSpecification specs = new ProductSpecification();
         StockList stock = new StockList();
@@ -44,6 +48,7 @@ class ProductRepositoryTest {
         specs.setType("AMD Ryzen 5");
         specs.setGraphicCard("AMD Radeon Graphics");
         specs.setScreenSize("1920x1080");
+        token.save(log);
         ProductInfo savedProduct = repo.save(productInfo);
         ProductInfo existProduct = entityManager.find(ProductInfo.class, savedProduct.getId());
         assertThat(productInfo.getProductName()).isEqualTo(existProduct.getProductName());
