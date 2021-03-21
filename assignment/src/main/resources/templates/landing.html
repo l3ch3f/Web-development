@@ -62,12 +62,10 @@
     <!--Products -->
     <section>
         <div class="container">
-            <!--    <div th:each="product: ${listProducts}">-->
-            <!--        <p th:text="${product.productName}"></p>-->
-            <!--    </div>-->
             <div class="container d-flex align-content-between">
                 <div th:each="product: ${listProducts}" class="container mt-2 row justify-content-between">
                     <div class="container d-flex flex-column mx-3 col-4">
+                        <!-- TODO Add dto save to anchor tag. -->
                         <a th:href="'/product/'+${product.id}">
                             <img class="imgProduct" th:src="${product.imgUrl}" alt="laptop">
                         </a>
@@ -110,8 +108,7 @@
             localStorage.setItem("token", JSON.stringify(item));
         }
         const token = getFromLocalStorage("token")
-        
-        if(!token || token===null || token===""|| token==undefined) {
+        if(!token || token==null || token==""|| token==undefined || token=="Something Wong!") {
             setToLocalStorage();
         }
     </script>

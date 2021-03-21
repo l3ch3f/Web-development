@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.nio.charset.Charset;
 import java.util.Optional;
+import java.util.Random;
 
 @Controller
 @RequestMapping("/product")
@@ -24,6 +26,11 @@ public class ProductController {
         ProductSpecification specs = product.get().getProductSpecification();
         model.addAttribute("product", product.get());
         model.addAttribute("specs", specs);
+
+        byte[] array = new byte[7]; // length is bounded by 7
+        new Random().nextBytes(array);
+        String generatedString = new String(array, Charset.forName("UTF-8"));
+        model.addAttribute("new_token",generatedString);
         return "product";
     }
 
