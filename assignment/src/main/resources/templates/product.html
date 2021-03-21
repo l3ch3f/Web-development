@@ -129,11 +129,11 @@
                         <div class="d-flex">
                             <div class="input-group my-3 quantityHandler">
                                 <button class="btn btn-outline-secondary" type="button">-</button>
-                                <input type="text" class="form-control" placeholder=""
+                                <input type="text" id="quantity[number]"class="form-control" placeholder=""
                                     aria-label="Example text with two button addons">
                                 <button class="btn btn-outline-secondary" type="button">+</button>
                             </div>
-                            <button>Add to ShoppingCart</button>
+                            <button id="btn[shoppingCart]" onclick="addToCart()">Add to ShoppingCart</button>
                         </div>
                     </div>
                 </div>
@@ -175,6 +175,32 @@
 
         if (!token || token == null || token == "" || token == undefined || token == "Something Wong!") {
             setToLocalStorage();
+        }
+    </script>
+    <script>
+        const url = 'http://localhost:8081'
+       
+        const addToCart = () => {
+            const token = getFromLocalStorage("token");
+            const quantity = parseInt( document.getElementById('quantity[number]').value);
+            const data ={
+                token: token,
+                quantity: quantity,
+                productId: "[[${product.id}]]",
+                productName: "[[${product.productName}]]"
+            }
+            const jsonData = JSON.stringify(data);
+             const otherParam = {
+                headers: {
+                    "content-type": "application/json; charset=UTF-8"
+                },
+                body: jsonData,
+                method: "POST"
+            };
+            fetch(url+'/addCart', otherParam)
+            .then(data=>{return data.json()})
+            .then(res=>{console.log(res)})
+            .catch(err=>console.log(err))
         }
     </script>
 </body>

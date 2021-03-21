@@ -1,13 +1,12 @@
 package com.webshoptg.assignment.repository;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.webshoptg.assignment.model.product.ProductInfo;
 import com.webshoptg.assignment.model.product.ProductSpecification;
 import com.webshoptg.assignment.model.product.StockList;
+import com.webshoptg.assignment.model.user.ShoppingCart;
 import com.webshoptg.assignment.model.user.UserLog;
-import com.webshoptg.assignment.service.ProductService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -26,10 +25,22 @@ class ProductRepositoryTest {
     private ProductRepository repo;
     @Autowired
     private TokenRepository token;
+    @Autowired
+    private ShoppingCartRepository shop;
 
     @Test
-    public void testCreateProduct1(){
+    public void testRepoCart(){
+        ShoppingCart cart = new ShoppingCart();
+        shop.save(cart);
+    }
+    @Test
+    public void testRepoToken(){
         UserLog log = new UserLog();
+        token.save(log);
+    }
+    @Test
+    public void testCreateProduct1(){
+
         ProductInfo productInfo = new ProductInfo();
         ProductSpecification specs = new ProductSpecification();
         StockList stock = new StockList();
@@ -48,7 +59,6 @@ class ProductRepositoryTest {
         specs.setType("AMD Ryzen 5");
         specs.setGraphicCard("AMD Radeon Graphics");
         specs.setScreenSize("1920x1080");
-        token.save(log);
         ProductInfo savedProduct = repo.save(productInfo);
         ProductInfo existProduct = entityManager.find(ProductInfo.class, savedProduct.getId());
         assertThat(productInfo.getProductName()).isEqualTo(existProduct.getProductName());

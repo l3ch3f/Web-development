@@ -8,6 +8,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TokenRepository extends JpaRepository<UserLog, Long> {
-    @Query("SELECT p FROM ProductInfo p WHERE p.productName = ?1")
-    UserLog findByToken(String token);
 }
