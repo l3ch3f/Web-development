@@ -138,6 +138,27 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
+<script>
+    const now = new Date();
+    const getFromLocalStorage = (name) => {
+            const itemName = localStorage.getItem(name);
+            // If item doesnt exist
+
+            if (!itemName) {
+                return "Something Wong!"
+            }
+            const item = JSON.parse(itemName)
+            // compare expiry time of the item with the current time
+            if (now.getTime() > item.expiry) {
+                // if item is expired, delete the item from storage
+                // and return null
+                localStorage.setItem(name, "")
+                return null
+            }
+            return item.value
+        }
+    const token = getFromLocalStorage("token")
+</script>
 </body>
 
 </html>
