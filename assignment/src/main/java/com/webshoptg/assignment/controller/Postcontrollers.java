@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -23,19 +24,23 @@ public class Postcontrollers {
 
     @PostMapping("/addCart")
     public ResponseEntity addCart(@RequestBody ProductDtoCart request) {
-        Optional<ProductInfo> product = (service.findById(request.getProductId()));
-        System.out.println(product.get());
+        ProductInfo productDao = service.findByName(request.getProductName());
         ShoppingCart cartExist = repo.findByToken(request.getToken());
         if (cartExist==null){
             ShoppingCart cart = new ShoppingCart();
             cart.setToken(request.getToken());
+            cart.addToList(productDao);
             repo.save(cart);
             return new ResponseEntity("added to cart +++ token has been created", HttpStatus.OK);
         } else {
-            System.out.println(request.getToken());
-            //TODO Token moet anders gemaakt worden.
-            System.out.println(cartExist.getToken().contains(request.getToken()));
-            return new ResponseEntity("added to cart without token create", HttpStatus.OK);
+            if (cartExist.getToken().contains(request.getToken())) {
+                cartExist.addToList(productDao);
+                System.out.println(cartExist.getProductInfos().size());
+
+                return new ResponseEntity("added to cart without token create", HttpStatus.OK);
+            } else {
+                return new ResponseEntity("Something Wong?!?!",HttpStatus.INTERNAL_SERVER_ERROR);
+            }
         }
 //        return new ResponseEntity("Something WONG?!?!", HttpStatus.INTERNAL_SERVER_ERROR);
 
