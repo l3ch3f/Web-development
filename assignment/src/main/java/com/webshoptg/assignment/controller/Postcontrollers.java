@@ -31,12 +31,13 @@ public class Postcontrollers {
             cart.setToken(request.getToken());
             cart.addToList(productDao);
             repo.save(cart);
+            System.out.println(cart.getProductInfos().get(0).getProductName());
             return new ResponseEntity("added to cart +++ token has been created", HttpStatus.OK);
         } else {
             if (cartExist.getToken().contains(request.getToken())) {
                 cartExist.addToList(productDao);
                 System.out.println(cartExist.getProductInfos().size());
-
+                System.out.println(cartExist.getProductInfos().get(0).getProductName());
                 return new ResponseEntity("added to cart without token create", HttpStatus.OK);
             } else {
                 return new ResponseEntity("Something Wong?!?!",HttpStatus.INTERNAL_SERVER_ERROR);
